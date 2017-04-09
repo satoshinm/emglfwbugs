@@ -1,4 +1,4 @@
-// 
+// glfwSetCharCallback() called for non-character keystrokes, pressing Cmd-A types "a", etc.  https://github.com/kripken/emscripten/issues/5121
 /*/
  emcc -s USE_GLFW=3 test_glfw_char_callback.c -o test_glfw_char_callback.html
 
