@@ -1,4 +1,4 @@
-// 
+// glfwGetKey() stuck key state, GLFW_PRESS persists after onblur - should clear key state on window losing focus https://github.com/kripken/emscripten/issues/5122
 /*/
  emcc -s USE_GLFW=3 test_glfw_get_key_stuck.c -o test_glfw_get_key_stuck.html
 
