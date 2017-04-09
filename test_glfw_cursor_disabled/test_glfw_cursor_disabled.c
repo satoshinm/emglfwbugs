@@ -5,6 +5,7 @@
 #include <GLFW/glfw3.h>
 #ifdef __EMSCRIPTEN__
 #include <emscripten.h>
+#include <emscripten/html5.h>
 #endif
 
 GLFWwindow *window;
@@ -25,6 +26,19 @@ void render() {
         // it should be 0 since Pointer Lock was not acquired. This is the behavior apps would expect.
     }
 }
+
+#ifdef __EMSCRIPTEN__
+EM_BOOL on_pointerlockchange(int eventType, const EmscriptenPointerlockChangeEvent *event, void *userData) {
+    printf("pointerlockchange, isActive=%d\n", event->isActive);
+    /* This is the application-level workaround to sync HTML5 Pointer Lock with glfw cursor state.
+    if (!pointerlockChangeEvent->isActive) {
+        printf("pointerlockchange deactivated, so enabling cursor\n");
+        glfwSetInputMode(g->window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+    }
+    */
+    return 0;
+}
+#endif
 
 int main() {
     if (!glfwInit()) {
@@ -47,6 +61,7 @@ int main() {
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
 #ifdef __EMSCRIPTEN__
+    emscripten_set_pointerlockchange_callback(NULL, NULL, 0, on_pointerlockchange);
     emscripten_set_main_loop(render, 0, 1);
 #else
     // TODO

@@ -1602,11 +1602,11 @@ var ASM_CONSTS = [];
 
 STATIC_BASE = 8;
 
-STATICTOP = STATIC_BASE + 4480;
+STATICTOP = STATIC_BASE + 4512;
   /* global initializers */  __ATINIT__.push();
   
 
-/* memory initializer */ allocate([255,255,255,255,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,1,0,0,5,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,3,0,0,0,124,13,0,0,0,4,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,255,255,255,255,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,1,0,0,71,76,70,87,95,67,85,82,83,79,82,95,68,73,83,65,66,76,69,68,63,32,37,100,10,0,116,101,115,116,95,103,108,102,119,95,99,117,114,115,111,114,95,100,105,115,97,98,108,101,100,0,17,0,10,0,17,17,17,0,0,0,0,5,0,0,0,0,0,0,9,0,0,0,0,11,0,0,0,0,0,0,0,0,17,0,15,10,17,17,17,3,10,7,0,1,19,9,11,11,0,0,9,6,11,0,0,11,0,6,17,0,0,0,17,17,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,0,0,0,0,0,0,0,17,0,10,10,17,17,17,0,10,0,0,2,0,9,11,0,0,0,9,0,11,0,0,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,0,0,0,0,0,0,0,0,0,0,0,12,0,0,0,0,12,0,0,0,0,9,12,0,0,0,0,0,12,0,0,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14,0,0,0,0,0,0,0,0,0,0,0,13,0,0,0,4,13,0,0,0,0,9,14,0,0,0,0,0,14,0,0,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16,0,0,0,0,0,0,0,0,0,0,0,15,0,0,0,0,15,0,0,0,0,9,16,0,0,0,0,0,16,0,0,16,0,0,18,0,0,0,18,18,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,0,0,0,18,18,18,0,0,0,0,0,0,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0,0,10,0,0,0,0,9,11,0,0,0,0,0,11,0,0,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,0,0,0,0,0,0,0,0,0,0,0,12,0,0,0,0,12,0,0,0,0,9,12,0,0,0,0,0,12,0,0,12,0,0,45,43,32,32,32,48,88,48,120,0,40,110,117,108,108,41,0,45,48,88,43,48,88,32,48,88,45,48,120,43,48,120,32,48,120,0,105,110,102,0,73,78,70,0,110,97,110,0,78,65,78,0,48,49,50,51,52,53,54,55,56,57,65,66,67,68,69,70,46,0,84,33,34,25,13,1,2,3,17,75,28,12,16,4,11,29,18,30,39,104,110,111,112,113,98,32,5,6,15,19,20,21,26,8,22,7,40,36,23,24,9,10,14,27,31,37,35,131,130,125,38,42,43,60,61,62,63,67,71,74,77,88,89,90,91,92,93,94,95,96,97,99,100,101,102,103,105,106,107,108,114,115,116,121,122,123,124,0,73,108,108,101,103,97,108,32,98,121,116,101,32,115,101,113,117,101,110,99,101,0,68,111,109,97,105,110,32,101,114,114,111,114,0,82,101,115,117,108,116,32,110,111,116,32,114,101,112,114,101,115,101,110,116,97,98,108,101,0,78,111,116,32,97,32,116,116,121,0,80,101,114,109,105,115,115,105,111,110,32,100,101,110,105,101,100,0,79,112,101,114,97,116,105,111,110,32,110,111,116,32,112,101,114,109,105,116,116,101,100,0,78,111,32,115,117,99,104,32,102,105,108,101,32,111,114,32,100,105,114,101,99,116,111,114,121,0,78,111,32,115,117,99,104,32,112,114,111,99,101,115,115,0,70,105,108,101,32,101,120,105,115,116,115,0,86,97,108,117,101,32,116,111,111,32,108,97,114,103,101,32,102,111,114,32,100,97,116,97,32,116,121,112,101,0,78,111,32,115,112,97,99,101,32,108,101,102,116,32,111,110,32,100,101,118,105,99,101,0,79,117,116,32,111,102,32,109,101,109,111,114,121,0,82,101,115,111,117,114,99,101,32,98,117,115,121,0,73,110,116,101,114,114,117,112,116,101,100,32,115,121,115,116,101,109,32,99,97,108,108,0,82,101,115,111,117,114,99,101,32,116,101,109,112,111,114,97,114,105,108,121,32,117,110,97,118,97,105,108,97,98,108,101,0,73,110,118,97,108,105,100,32,115,101,101,107,0,67,114,111,115,115,45,100,101,118,105,99,101,32,108,105,110,107,0,82,101,97,100,45,111,110,108,121,32,102,105,108,101,32,115,121,115,116,101,109,0,68,105,114,101,99,116,111,114,121,32,110,111,116,32,101,109,112,116,121,0,67,111,110,110,101,99,116,105,111,110,32,114,101,115,101,116,32,98,121,32,112,101,101,114,0,79,112,101,114,97,116,105,111,110,32,116,105,109,101,100,32,111,117,116,0,67,111,110,110,101,99,116,105,111,110,32,114,101,102,117,115,101,100,0,72,111,115,116,32,105,115,32,100,111,119,110,0,72,111,115,116,32,105,115,32,117,110,114,101,97,99,104,97,98,108,101,0,65,100,100,114,101,115,115,32,105,110,32,117,115,101,0,66,114,111,107,101,110,32,112,105,112,101,0,73,47,79,32,101,114,114,111,114,0,78,111,32,115,117,99,104,32,100,101,118,105,99,101,32,111,114,32,97,100,100,114,101,115,115,0,66,108,111,99,107,32,100,101,118,105,99,101,32,114,101,113,117,105,114,101,100,0,78,111,32,115,117,99,104,32,100,101,118,105,99,101,0,78,111,116,32,97,32,100,105,114,101,99,116,111,114,121,0,73,115,32,97,32,100,105,114,101,99,116,111,114,121,0,84,101,120,116,32,102,105,108,101,32,98,117,115,121,0,69,120,101,99,32,102,111,114,109,97,116,32,101,114,114,111,114,0,73,110,118,97,108,105,100,32,97,114,103,117,109,101,110,116,0,65,114,103,117,109,101,110,116,32,108,105,115,116,32,116,111,111,32,108,111,110,103,0,83,121,109,98,111,108,105,99,32,108,105,110,107,32,108,111,111,112,0,70,105,108,101,110,97,109,101,32,116,111,111,32,108,111,110,103,0,84,111,111,32,109,97,110,121,32,111,112,101,110,32,102,105,108,101,115,32,105,110,32,115,121,115,116,101,109,0,78,111,32,102,105,108,101,32,100,101,115,99,114,105,112,116,111,114,115,32,97,118,97,105,108,97,98,108,101,0,66,97,100,32,102,105,108,101,32,100,101,115,99,114,105,112,116,111,114,0,78,111,32,99,104,105,108,100,32,112,114,111,99,101,115,115,0,66,97,100,32,97,100,100,114,101,115,115,0,70,105,108,101,32,116,111,111,32,108,97,114,103,101,0,84,111,111,32,109,97,110,121,32,108,105,110,107,115,0,78,111,32,108,111,99,107,115,32,97,118,97,105,108,97,98,108,101,0,82,101,115,111,117,114,99,101,32,100,101,97,100,108,111,99,107,32,119,111,117,108,100,32,111,99,99,117,114,0,83,116,97,116,101,32,110,111,116,32,114,101,99,111,118,101,114,97,98,108,101,0,80,114,101,118,105,111,117,115,32,111,119,110,101,114,32,100,105,101,100,0,79,112,101,114,97,116,105,111,110,32,99,97,110,99,101,108,101,100,0,70,117,110,99,116,105,111,110,32,110,111,116,32,105,109,112,108,101,109,101,110,116,101,100,0,78,111,32,109,101,115,115,97,103,101,32,111,102,32,100,101,115,105,114,101,100,32,116,121,112,101,0,73,100,101,110,116,105,102,105,101,114,32,114,101,109,111,118,101,100,0,68,101,118,105,99,101,32,110,111,116,32,97,32,115,116,114,101,97,109,0,78,111,32,100,97,116,97,32,97,118,97,105,108,97,98,108,101,0,68,101,118,105,99,101,32,116,105,109,101,111,117,116,0,79,117,116,32,111,102,32,115,116,114,101,97,109,115,32,114,101,115,111,117,114,99,101,115,0,76,105,110,107,32,104,97,115,32,98,101,101,110,32,115,101,118,101,114,101,100,0,80,114,111,116,111,99,111,108,32,101,114,114,111,114,0,66,97,100,32,109,101,115,115,97,103,101,0,70,105,108,101,32,100,101,115,99,114,105,112,116,111,114,32,105,110,32,98,97,100,32,115,116,97,116,101,0,78,111,116,32,97,32,115,111,99,107,101,116,0,68,101,115,116,105,110,97,116,105,111,110,32,97,100,100,114,101,115,115,32,114,101,113,117,105,114,101,100,0,77,101,115,115,97,103,101,32,116,111,111,32,108,97,114,103,101,0,80,114,111,116,111,99,111,108,32,119,114,111,110,103,32,116,121,112,101,32,102,111,114,32,115,111,99,107,101,116,0,80,114,111,116,111,99,111,108,32,110,111,116,32,97,118,97,105,108,97,98,108,101,0,80,114,111,116,111,99,111,108,32,110,111,116,32,115,117,112,112,111,114,116,101,100,0,83,111,99,107,101,116,32,116,121,112,101,32,110,111,116,32,115,117,112,112,111,114,116,101,100,0,78,111,116,32,115,117,112,112,111,114,116,101,100,0,80,114,111,116,111,99,111,108,32,102,97,109,105,108,121,32,110,111,116,32,115,117,112,112,111,114,116,101,100,0,65,100,100,114,101,115,115,32,102,97,109,105,108,121,32,110,111,116,32,115,117,112,112,111,114,116,101,100,32,98,121,32,112,114,111,116,111,99,111,108,0,65,100,100,114,101,115,115,32,110,111,116,32,97,118,97,105,108,97,98,108,101,0,78,101,116,119,111,114,107,32,105,115,32,100,111,119,110,0,78,101,116,119,111,114,107,32,117,110,114,101,97,99,104,97,98,108,101,0,67,111,110,110,101,99,116,105,111,110,32,114,101,115,101,116,32,98,121,32,110,101,116,119,111,114,107,0,67,111,110,110,101,99,116,105,111,110,32,97,98,111,114,116,101,100,0,78,111,32,98,117,102,102,101,114,32,115,112,97,99,101,32,97,118,97,105,108,97,98,108,101,0,83,111,99,107,101,116,32,105,115,32,99,111,110,110,101,99,116,101,100,0,83,111,99,107,101,116,32,110,111,116,32,99,111,110,110,101,99,116,101,100,0,67,97,110,110,111,116,32,115,101,110,100,32,97,102,116,101,114,32,115,111,99,107,101,116,32,115,104,117,116,100,111,119,110,0,79,112,101,114,97,116,105,111,110,32,97,108,114,101,97,100,121,32,105,110,32,112,114,111,103,114,101,115,115,0,79,112,101,114,97,116,105,111,110,32,105,110,32,112,114,111,103,114,101,115,115,0,83,116,97,108,101,32,102,105,108,101,32,104,97,110,100,108,101,0,82,101,109,111,116,101,32,73,47,79,32,101,114,114,111,114,0,81,117,111,116,97,32,101,120,99,101,101,100,101,100,0,78,111,32,109,101,100,105,117,109,32,102,111,117,110,100,0,87,114,111,110,103,32,109,101,100,105,117,109,32,116,121,112,101,0,78,111,32,101,114,114,111,114,32,105,110,102,111,114,109,97,116,105,111,110,0,0], "i8", ALLOC_NONE, Runtime.GLOBAL_BASE);
+/* memory initializer */ allocate([255,255,255,255,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,128,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,1,0,0,5,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,3,0,0,0,156,13,0,0,0,4,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,255,255,255,255,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,1,0,0,71,76,70,87,95,67,85,82,83,79,82,95,68,73,83,65,66,76,69,68,63,32,37,100,10,0,112,111,105,110,116,101,114,108,111,99,107,99,104,97,110,103,101,44,32,105,115,65,99,116,105,118,101,61,37,100,10,0,116,101,115,116,95,103,108,102,119,95,99,117,114,115,111,114,95,100,105,115,97,98,108,101,100,0,17,0,10,0,17,17,17,0,0,0,0,5,0,0,0,0,0,0,9,0,0,0,0,11,0,0,0,0,0,0,0,0,17,0,15,10,17,17,17,3,10,7,0,1,19,9,11,11,0,0,9,6,11,0,0,11,0,6,17,0,0,0,17,17,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,0,0,0,0,0,0,0,17,0,10,10,17,17,17,0,10,0,0,2,0,9,11,0,0,0,9,0,11,0,0,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,0,0,0,0,0,0,0,0,0,0,0,12,0,0,0,0,12,0,0,0,0,9,12,0,0,0,0,0,12,0,0,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14,0,0,0,0,0,0,0,0,0,0,0,13,0,0,0,4,13,0,0,0,0,9,14,0,0,0,0,0,14,0,0,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16,0,0,0,0,0,0,0,0,0,0,0,15,0,0,0,0,15,0,0,0,0,9,16,0,0,0,0,0,16,0,0,16,0,0,18,0,0,0,18,18,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,0,0,0,18,18,18,0,0,0,0,0,0,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0,0,10,0,0,0,0,9,11,0,0,0,0,0,11,0,0,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,0,0,0,0,0,0,0,0,0,0,0,12,0,0,0,0,12,0,0,0,0,9,12,0,0,0,0,0,12,0,0,12,0,0,45,43,32,32,32,48,88,48,120,0,40,110,117,108,108,41,0,45,48,88,43,48,88,32,48,88,45,48,120,43,48,120,32,48,120,0,105,110,102,0,73,78,70,0,110,97,110,0,78,65,78,0,48,49,50,51,52,53,54,55,56,57,65,66,67,68,69,70,46,0,84,33,34,25,13,1,2,3,17,75,28,12,16,4,11,29,18,30,39,104,110,111,112,113,98,32,5,6,15,19,20,21,26,8,22,7,40,36,23,24,9,10,14,27,31,37,35,131,130,125,38,42,43,60,61,62,63,67,71,74,77,88,89,90,91,92,93,94,95,96,97,99,100,101,102,103,105,106,107,108,114,115,116,121,122,123,124,0,73,108,108,101,103,97,108,32,98,121,116,101,32,115,101,113,117,101,110,99,101,0,68,111,109,97,105,110,32,101,114,114,111,114,0,82,101,115,117,108,116,32,110,111,116,32,114,101,112,114,101,115,101,110,116,97,98,108,101,0,78,111,116,32,97,32,116,116,121,0,80,101,114,109,105,115,115,105,111,110,32,100,101,110,105,101,100,0,79,112,101,114,97,116,105,111,110,32,110,111,116,32,112,101,114,109,105,116,116,101,100,0,78,111,32,115,117,99,104,32,102,105,108,101,32,111,114,32,100,105,114,101,99,116,111,114,121,0,78,111,32,115,117,99,104,32,112,114,111,99,101,115,115,0,70,105,108,101,32,101,120,105,115,116,115,0,86,97,108,117,101,32,116,111,111,32,108,97,114,103,101,32,102,111,114,32,100,97,116,97,32,116,121,112,101,0,78,111,32,115,112,97,99,101,32,108,101,102,116,32,111,110,32,100,101,118,105,99,101,0,79,117,116,32,111,102,32,109,101,109,111,114,121,0,82,101,115,111,117,114,99,101,32,98,117,115,121,0,73,110,116,101,114,114,117,112,116,101,100,32,115,121,115,116,101,109,32,99,97,108,108,0,82,101,115,111,117,114,99,101,32,116,101,109,112,111,114,97,114,105,108,121,32,117,110,97,118,97,105,108,97,98,108,101,0,73,110,118,97,108,105,100,32,115,101,101,107,0,67,114,111,115,115,45,100,101,118,105,99,101,32,108,105,110,107,0,82,101,97,100,45,111,110,108,121,32,102,105,108,101,32,115,121,115,116,101,109,0,68,105,114,101,99,116,111,114,121,32,110,111,116,32,101,109,112,116,121,0,67,111,110,110,101,99,116,105,111,110,32,114,101,115,101,116,32,98,121,32,112,101,101,114,0,79,112,101,114,97,116,105,111,110,32,116,105,109,101,100,32,111,117,116,0,67,111,110,110,101,99,116,105,111,110,32,114,101,102,117,115,101,100,0,72,111,115,116,32,105,115,32,100,111,119,110,0,72,111,115,116,32,105,115,32,117,110,114,101,97,99,104,97,98,108,101,0,65,100,100,114,101,115,115,32,105,110,32,117,115,101,0,66,114,111,107,101,110,32,112,105,112,101,0,73,47,79,32,101,114,114,111,114,0,78,111,32,115,117,99,104,32,100,101,118,105,99,101,32,111,114,32,97,100,100,114,101,115,115,0,66,108,111,99,107,32,100,101,118,105,99,101,32,114,101,113,117,105,114,101,100,0,78,111,32,115,117,99,104,32,100,101,118,105,99,101,0,78,111,116,32,97,32,100,105,114,101,99,116,111,114,121,0,73,115,32,97,32,100,105,114,101,99,116,111,114,121,0,84,101,120,116,32,102,105,108,101,32,98,117,115,121,0,69,120,101,99,32,102,111,114,109,97,116,32,101,114,114,111,114,0,73,110,118,97,108,105,100,32,97,114,103,117,109,101,110,116,0,65,114,103,117,109,101,110,116,32,108,105,115,116,32,116,111,111,32,108,111,110,103,0,83,121,109,98,111,108,105,99,32,108,105,110,107,32,108,111,111,112,0,70,105,108,101,110,97,109,101,32,116,111,111,32,108,111,110,103,0,84,111,111,32,109,97,110,121,32,111,112,101,110,32,102,105,108,101,115,32,105,110,32,115,121,115,116,101,109,0,78,111,32,102,105,108,101,32,100,101,115,99,114,105,112,116,111,114,115,32,97,118,97,105,108,97,98,108,101,0,66,97,100,32,102,105,108,101,32,100,101,115,99,114,105,112,116,111,114,0,78,111,32,99,104,105,108,100,32,112,114,111,99,101,115,115,0,66,97,100,32,97,100,100,114,101,115,115,0,70,105,108,101,32,116,111,111,32,108,97,114,103,101,0,84,111,111,32,109,97,110,121,32,108,105,110,107,115,0,78,111,32,108,111,99,107,115,32,97,118,97,105,108,97,98,108,101,0,82,101,115,111,117,114,99,101,32,100,101,97,100,108,111,99,107,32,119,111,117,108,100,32,111,99,99,117,114,0,83,116,97,116,101,32,110,111,116,32,114,101,99,111,118,101,114,97,98,108,101,0,80,114,101,118,105,111,117,115,32,111,119,110,101,114,32,100,105,101,100,0,79,112,101,114,97,116,105,111,110,32,99,97,110,99,101,108,101,100,0,70,117,110,99,116,105,111,110,32,110,111,116,32,105,109,112,108,101,109,101,110,116,101,100,0,78,111,32,109,101,115,115,97,103,101,32,111,102,32,100,101,115,105,114,101,100,32,116,121,112,101,0,73,100,101,110,116,105,102,105,101,114,32,114,101,109,111,118,101,100,0,68,101,118,105,99,101,32,110,111,116,32,97,32,115,116,114,101,97,109,0,78,111,32,100,97,116,97,32,97,118,97,105,108,97,98,108,101,0,68,101,118,105,99,101,32,116,105,109,101,111,117,116,0,79,117,116,32,111,102,32,115,116,114,101,97,109,115,32,114,101,115,111,117,114,99,101,115,0,76,105,110,107,32,104,97,115,32,98,101,101,110,32,115,101,118,101,114,101,100,0,80,114,111,116,111,99,111,108,32,101,114,114,111,114,0,66,97,100,32,109,101,115,115,97,103,101,0,70,105,108,101,32,100,101,115,99,114,105,112,116,111,114,32,105,110,32,98,97,100,32,115,116,97,116,101,0,78,111,116,32,97,32,115,111,99,107,101,116,0,68,101,115,116,105,110,97,116,105,111,110,32,97,100,100,114,101,115,115,32,114,101,113,117,105,114,101,100,0,77,101,115,115,97,103,101,32,116,111,111,32,108,97,114,103,101,0,80,114,111,116,111,99,111,108,32,119,114,111,110,103,32,116,121,112,101,32,102,111,114,32,115,111,99,107,101,116,0,80,114,111,116,111,99,111,108,32,110,111,116,32,97,118,97,105,108,97,98,108,101,0,80,114,111,116,111,99,111,108,32,110,111,116,32,115,117,112,112,111,114,116,101,100,0,83,111,99,107,101,116,32,116,121,112,101,32,110,111,116,32,115,117,112,112,111,114,116,101,100,0,78,111,116,32,115,117,112,112,111,114,116,101,100,0,80,114,111,116,111,99,111,108,32,102,97,109,105,108,121,32,110,111,116,32,115,117,112,112,111,114,116,101,100,0,65,100,100,114,101,115,115,32,102,97,109,105,108,121,32,110,111,116,32,115,117,112,112,111,114,116,101,100,32,98,121,32,112,114,111,116,111,99,111,108,0,65,100,100,114,101,115,115,32,110,111,116,32,97,118,97,105,108,97,98,108,101,0,78,101,116,119,111,114,107,32,105,115,32,100,111,119,110,0,78,101,116,119,111,114,107,32,117,110,114,101,97,99,104,97,98,108,101,0,67,111,110,110,101,99,116,105,111,110,32,114,101,115,101,116,32,98,121,32,110,101,116,119,111,114,107,0,67,111,110,110,101,99,116,105,111,110,32,97,98,111,114,116,101,100,0,78,111,32,98,117,102,102,101,114,32,115,112,97,99,101,32,97,118,97,105,108,97,98,108,101,0,83,111,99,107,101,116,32,105,115,32,99,111,110,110,101,99,116,101,100,0,83,111,99,107,101,116,32,110,111,116,32,99,111,110,110,101,99,116,101,100,0,67,97,110,110,111,116,32,115,101,110,100,32,97,102,116,101,114,32,115,111,99,107,101,116,32,115,104,117,116,100,111,119,110,0,79,112,101,114,97,116,105,111,110,32,97,108,114,101,97,100,121,32,105,110,32,112,114,111,103,114,101,115,115,0,79,112,101,114,97,116,105,111,110,32,105,110,32,112,114,111,103,114,101,115,115,0,83,116,97,108,101,32,102,105,108,101,32,104,97,110,100,108,101,0,82,101,109,111,116,101,32,73,47,79,32,101,114,114,111,114,0,81,117,111,116,97,32,101,120,99,101,101,100,101,100,0,78,111,32,109,101,100,105,117,109,32,102,111,117,110,100,0,87,114,111,110,103,32,109,101,100,105,117,109,32,116,121,112,101,0,78,111,32,101,114,114,111,114,32,105,110,102,111,114,109,97,116,105,111,110,0,0], "i8", ALLOC_NONE, Runtime.GLOBAL_BASE);
 
 
 
@@ -1651,6 +1651,936 @@ function copyTempDouble(ptr) {
 
 // {{PRE_LIBRARY}}
 
+
+  
+  var JSEvents={keyEvent:0,mouseEvent:0,wheelEvent:0,uiEvent:0,focusEvent:0,deviceOrientationEvent:0,deviceMotionEvent:0,fullscreenChangeEvent:0,pointerlockChangeEvent:0,visibilityChangeEvent:0,touchEvent:0,lastGamepadState:null,lastGamepadStateFrame:null,numGamepadsConnected:0,previousFullscreenElement:null,previousScreenX:null,previousScreenY:null,removeEventListenersRegistered:false,staticInit:function () {
+        if (typeof window !== 'undefined') {
+          window.addEventListener("gamepadconnected", function() { ++JSEvents.numGamepadsConnected; });
+          window.addEventListener("gamepaddisconnected", function() { --JSEvents.numGamepadsConnected; });
+        }
+      },registerRemoveEventListeners:function () {
+        if (!JSEvents.removeEventListenersRegistered) {
+        __ATEXIT__.push(function() {
+            for(var i = JSEvents.eventHandlers.length-1; i >= 0; --i) {
+              JSEvents._removeHandler(i);
+            }
+           });
+          JSEvents.removeEventListenersRegistered = true;
+        }
+      },findEventTarget:function (target) {
+        if (target) {
+          if (typeof target == "number") {
+            target = Pointer_stringify(target);
+          }
+          if (target == '#window') return window;
+          else if (target == '#document') return document;
+          else if (target == '#screen') return window.screen;
+          else if (target == '#canvas') return Module['canvas'];
+  
+          if (typeof target == 'string') return document.getElementById(target);
+          else return target;
+        } else {
+          // The sensible target varies between events, but use window as the default
+          // since DOM events mostly can default to that. Specific callback registrations
+          // override their own defaults.
+          return window;
+        }
+      },deferredCalls:[],deferCall:function (targetFunction, precedence, argsList) {
+        function arraysHaveEqualContent(arrA, arrB) {
+          if (arrA.length != arrB.length) return false;
+  
+          for(var i in arrA) {
+            if (arrA[i] != arrB[i]) return false;
+          }
+          return true;
+        }
+        // Test if the given call was already queued, and if so, don't add it again.
+        for(var i in JSEvents.deferredCalls) {
+          var call = JSEvents.deferredCalls[i];
+          if (call.targetFunction == targetFunction && arraysHaveEqualContent(call.argsList, argsList)) {
+            return;
+          }
+        }
+        JSEvents.deferredCalls.push({
+          targetFunction: targetFunction,
+          precedence: precedence,
+          argsList: argsList
+        });
+  
+        JSEvents.deferredCalls.sort(function(x,y) { return x.precedence < y.precedence; });
+      },removeDeferredCalls:function (targetFunction) {
+        for(var i = 0; i < JSEvents.deferredCalls.length; ++i) {
+          if (JSEvents.deferredCalls[i].targetFunction == targetFunction) {
+            JSEvents.deferredCalls.splice(i, 1);
+            --i;
+          }
+        }
+      },canPerformEventHandlerRequests:function () {
+        return JSEvents.inEventHandler && JSEvents.currentEventHandler.allowsDeferredCalls;
+      },runDeferredCalls:function () {
+        if (!JSEvents.canPerformEventHandlerRequests()) {
+          return;
+        }
+        for(var i = 0; i < JSEvents.deferredCalls.length; ++i) {
+          var call = JSEvents.deferredCalls[i];
+          JSEvents.deferredCalls.splice(i, 1);
+          --i;
+          call.targetFunction.apply(this, call.argsList);
+        }
+      },inEventHandler:0,currentEventHandler:null,eventHandlers:[],isInternetExplorer:function () { return navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0; },removeAllHandlersOnTarget:function (target, eventTypeString) {
+        for(var i = 0; i < JSEvents.eventHandlers.length; ++i) {
+          if (JSEvents.eventHandlers[i].target == target && 
+            (!eventTypeString || eventTypeString == JSEvents.eventHandlers[i].eventTypeString)) {
+             JSEvents._removeHandler(i--);
+           }
+        }
+      },_removeHandler:function (i) {
+        var h = JSEvents.eventHandlers[i];
+        h.target.removeEventListener(h.eventTypeString, h.eventListenerFunc, h.useCapture);
+        JSEvents.eventHandlers.splice(i, 1);
+      },registerOrRemoveHandler:function (eventHandler) {
+        var jsEventHandler = function jsEventHandler(event) {
+          // Increment nesting count for the event handler.
+          ++JSEvents.inEventHandler;
+          JSEvents.currentEventHandler = eventHandler;
+          // Process any old deferred calls the user has placed.
+          JSEvents.runDeferredCalls();
+          // Process the actual event, calls back to user C code handler.
+          eventHandler.handlerFunc(event);
+          // Process any new deferred calls that were placed right now from this event handler.
+          JSEvents.runDeferredCalls();
+          // Out of event handler - restore nesting count.
+          --JSEvents.inEventHandler;
+        }
+        
+        if (eventHandler.callbackfunc) {
+          eventHandler.eventListenerFunc = jsEventHandler;
+          eventHandler.target.addEventListener(eventHandler.eventTypeString, jsEventHandler, eventHandler.useCapture);
+          JSEvents.eventHandlers.push(eventHandler);
+          JSEvents.registerRemoveEventListeners();
+        } else {
+          for(var i = 0; i < JSEvents.eventHandlers.length; ++i) {
+            if (JSEvents.eventHandlers[i].target == eventHandler.target
+             && JSEvents.eventHandlers[i].eventTypeString == eventHandler.eventTypeString) {
+               JSEvents._removeHandler(i--);
+             }
+          }
+        }
+      },registerKeyEventCallback:function (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString) {
+        if (!JSEvents.keyEvent) {
+          JSEvents.keyEvent = _malloc( 164 );
+        }
+        var handlerFunc = function(event) {
+          var e = event || window.event;
+          stringToUTF8(e.key ? e.key : "", JSEvents.keyEvent + 0, 32);
+          stringToUTF8(e.code ? e.code : "", JSEvents.keyEvent + 32, 32);
+          HEAP32[(((JSEvents.keyEvent)+(64))>>2)]=e.location;
+          HEAP32[(((JSEvents.keyEvent)+(68))>>2)]=e.ctrlKey;
+          HEAP32[(((JSEvents.keyEvent)+(72))>>2)]=e.shiftKey;
+          HEAP32[(((JSEvents.keyEvent)+(76))>>2)]=e.altKey;
+          HEAP32[(((JSEvents.keyEvent)+(80))>>2)]=e.metaKey;
+          HEAP32[(((JSEvents.keyEvent)+(84))>>2)]=e.repeat;
+          stringToUTF8(e.locale ? e.locale : "", JSEvents.keyEvent + 88, 32);
+          stringToUTF8(e.char ? e.char : "", JSEvents.keyEvent + 120, 32);
+          HEAP32[(((JSEvents.keyEvent)+(152))>>2)]=e.charCode;
+          HEAP32[(((JSEvents.keyEvent)+(156))>>2)]=e.keyCode;
+          HEAP32[(((JSEvents.keyEvent)+(160))>>2)]=e.which;
+          var shouldCancel = Module['dynCall_iiii'](callbackfunc, eventTypeId, JSEvents.keyEvent, userData);
+          if (shouldCancel) {
+            e.preventDefault();
+          }
+        };
+  
+        var eventHandler = {
+          target: JSEvents.findEventTarget(target),
+          allowsDeferredCalls: JSEvents.isInternetExplorer() ? false : true, // MSIE doesn't allow fullscreen and pointerlock requests from key handlers, others do.
+          eventTypeString: eventTypeString,
+          callbackfunc: callbackfunc,
+          handlerFunc: handlerFunc,
+          useCapture: useCapture
+        };
+        JSEvents.registerOrRemoveHandler(eventHandler);
+      },getBoundingClientRectOrZeros:function (target) {
+        return target.getBoundingClientRect ? target.getBoundingClientRect() : { left: 0, top: 0 };
+      },fillMouseEventData:function (eventStruct, e, target) {
+        HEAPF64[((eventStruct)>>3)]=JSEvents.tick();
+        HEAP32[(((eventStruct)+(8))>>2)]=e.screenX;
+        HEAP32[(((eventStruct)+(12))>>2)]=e.screenY;
+        HEAP32[(((eventStruct)+(16))>>2)]=e.clientX;
+        HEAP32[(((eventStruct)+(20))>>2)]=e.clientY;
+        HEAP32[(((eventStruct)+(24))>>2)]=e.ctrlKey;
+        HEAP32[(((eventStruct)+(28))>>2)]=e.shiftKey;
+        HEAP32[(((eventStruct)+(32))>>2)]=e.altKey;
+        HEAP32[(((eventStruct)+(36))>>2)]=e.metaKey;
+        HEAP16[(((eventStruct)+(40))>>1)]=e.button;
+        HEAP16[(((eventStruct)+(42))>>1)]=e.buttons;
+        HEAP32[(((eventStruct)+(44))>>2)]=e["movementX"] || e["mozMovementX"] || e["webkitMovementX"] || (e.screenX-JSEvents.previousScreenX);
+        HEAP32[(((eventStruct)+(48))>>2)]=e["movementY"] || e["mozMovementY"] || e["webkitMovementY"] || (e.screenY-JSEvents.previousScreenY);
+  
+        if (Module['canvas']) {
+          var rect = Module['canvas'].getBoundingClientRect();
+          HEAP32[(((eventStruct)+(60))>>2)]=e.clientX - rect.left;
+          HEAP32[(((eventStruct)+(64))>>2)]=e.clientY - rect.top;
+        } else { // Canvas is not initialized, return 0.
+          HEAP32[(((eventStruct)+(60))>>2)]=0;
+          HEAP32[(((eventStruct)+(64))>>2)]=0;
+        }
+        if (target) {
+          var rect = JSEvents.getBoundingClientRectOrZeros(target);
+          HEAP32[(((eventStruct)+(52))>>2)]=e.clientX - rect.left;
+          HEAP32[(((eventStruct)+(56))>>2)]=e.clientY - rect.top;        
+        } else { // No specific target passed, return 0.
+          HEAP32[(((eventStruct)+(52))>>2)]=0;
+          HEAP32[(((eventStruct)+(56))>>2)]=0;
+        }
+        // wheel and mousewheel events contain wrong screenX/screenY on chrome/opera
+        // https://github.com/kripken/emscripten/pull/4997
+        // https://bugs.chromium.org/p/chromium/issues/detail?id=699956
+        if (e.type !== 'wheel' && e.type !== 'mousewheel') {
+          JSEvents.previousScreenX = e.screenX;
+          JSEvents.previousScreenY = e.screenY;
+        }
+      },registerMouseEventCallback:function (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString) {
+        if (!JSEvents.mouseEvent) {
+          JSEvents.mouseEvent = _malloc( 72 );
+        }
+        target = JSEvents.findEventTarget(target);
+        var handlerFunc = function(event) {
+          var e = event || window.event;
+          JSEvents.fillMouseEventData(JSEvents.mouseEvent, e, target);
+          var shouldCancel = Module['dynCall_iiii'](callbackfunc, eventTypeId, JSEvents.mouseEvent, userData);
+          if (shouldCancel) {
+            e.preventDefault();
+          }
+        };
+  
+        var eventHandler = {
+          target: target,
+          allowsDeferredCalls: eventTypeString != 'mousemove' && eventTypeString != 'mouseenter' && eventTypeString != 'mouseleave', // Mouse move events do not allow fullscreen/pointer lock requests to be handled in them!
+          eventTypeString: eventTypeString,
+          callbackfunc: callbackfunc,
+          handlerFunc: handlerFunc,
+          useCapture: useCapture
+        };
+        // In IE, mousedown events don't either allow deferred calls to be run!
+        if (JSEvents.isInternetExplorer() && eventTypeString == 'mousedown') eventHandler.allowsDeferredCalls = false;
+        JSEvents.registerOrRemoveHandler(eventHandler);
+      },registerWheelEventCallback:function (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString) {
+        if (!JSEvents.wheelEvent) {
+          JSEvents.wheelEvent = _malloc( 104 );
+        }
+        target = JSEvents.findEventTarget(target);
+        // The DOM Level 3 events spec event 'wheel'
+        var wheelHandlerFunc = function(event) {
+          var e = event || window.event;
+          JSEvents.fillMouseEventData(JSEvents.wheelEvent, e, target);
+          HEAPF64[(((JSEvents.wheelEvent)+(72))>>3)]=e["deltaX"];
+          HEAPF64[(((JSEvents.wheelEvent)+(80))>>3)]=e["deltaY"];
+          HEAPF64[(((JSEvents.wheelEvent)+(88))>>3)]=e["deltaZ"];
+          HEAP32[(((JSEvents.wheelEvent)+(96))>>2)]=e["deltaMode"];
+          var shouldCancel = Module['dynCall_iiii'](callbackfunc, eventTypeId, JSEvents.wheelEvent, userData);
+          if (shouldCancel) {
+            e.preventDefault();
+          }
+        };
+        // The 'mousewheel' event as implemented in Safari 6.0.5
+        var mouseWheelHandlerFunc = function(event) {
+          var e = event || window.event;
+          JSEvents.fillMouseEventData(JSEvents.wheelEvent, e, target);
+          HEAPF64[(((JSEvents.wheelEvent)+(72))>>3)]=e["wheelDeltaX"] || 0;
+          HEAPF64[(((JSEvents.wheelEvent)+(80))>>3)]=-(e["wheelDeltaY"] ? e["wheelDeltaY"] : e["wheelDelta"]) /* 1. Invert to unify direction with the DOM Level 3 wheel event. 2. MSIE does not provide wheelDeltaY, so wheelDelta is used as a fallback. */;
+          HEAPF64[(((JSEvents.wheelEvent)+(88))>>3)]=0 /* Not available */;
+          HEAP32[(((JSEvents.wheelEvent)+(96))>>2)]=0 /* DOM_DELTA_PIXEL */;
+          var shouldCancel = Module['dynCall_iiii'](callbackfunc, eventTypeId, JSEvents.wheelEvent, userData);
+          if (shouldCancel) {
+            e.preventDefault();
+          }
+        };
+  
+        var eventHandler = {
+          target: target,
+          allowsDeferredCalls: true,
+          eventTypeString: eventTypeString,
+          callbackfunc: callbackfunc,
+          handlerFunc: (eventTypeString == 'wheel') ? wheelHandlerFunc : mouseWheelHandlerFunc,
+          useCapture: useCapture
+        };
+        JSEvents.registerOrRemoveHandler(eventHandler);
+      },pageScrollPos:function () {
+        if (window.pageXOffset > 0 || window.pageYOffset > 0) {
+          return [window.pageXOffset, window.pageYOffset];
+        }
+        if (typeof document.documentElement.scrollLeft !== 'undefined' || typeof document.documentElement.scrollTop !== 'undefined') {
+          return [document.documentElement.scrollLeft, document.documentElement.scrollTop];
+        }
+        return [document.body.scrollLeft|0, document.body.scrollTop|0];
+      },registerUiEventCallback:function (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString) {
+        if (!JSEvents.uiEvent) {
+          JSEvents.uiEvent = _malloc( 36 );
+        }
+  
+        if (eventTypeString == "scroll" && !target) {
+          target = document; // By default read scroll events on document rather than window.
+        } else {
+          target = JSEvents.findEventTarget(target);
+        }
+  
+        var handlerFunc = function(event) {
+          var e = event || window.event;
+          if (e.target != target) {
+            // Never take ui events such as scroll via a 'bubbled' route, but always from the direct element that
+            // was targeted. Otherwise e.g. if app logs a message in response to a page scroll, the Emscripten log
+            // message box could cause to scroll, generating a new (bubbled) scroll message, causing a new log print,
+            // causing a new scroll, etc..
+            return;
+          }
+          var scrollPos = JSEvents.pageScrollPos();
+          HEAP32[((JSEvents.uiEvent)>>2)]=e.detail;
+          HEAP32[(((JSEvents.uiEvent)+(4))>>2)]=document.body.clientWidth;
+          HEAP32[(((JSEvents.uiEvent)+(8))>>2)]=document.body.clientHeight;
+          HEAP32[(((JSEvents.uiEvent)+(12))>>2)]=window.innerWidth;
+          HEAP32[(((JSEvents.uiEvent)+(16))>>2)]=window.innerHeight;
+          HEAP32[(((JSEvents.uiEvent)+(20))>>2)]=window.outerWidth;
+          HEAP32[(((JSEvents.uiEvent)+(24))>>2)]=window.outerHeight;
+          HEAP32[(((JSEvents.uiEvent)+(28))>>2)]=scrollPos[0];
+          HEAP32[(((JSEvents.uiEvent)+(32))>>2)]=scrollPos[1];
+          var shouldCancel = Module['dynCall_iiii'](callbackfunc, eventTypeId, JSEvents.uiEvent, userData);
+          if (shouldCancel) {
+            e.preventDefault();
+          }
+        };
+  
+        var eventHandler = {
+          target: target,
+          allowsDeferredCalls: false, // Neither scroll or resize events allow running requests inside them.
+          eventTypeString: eventTypeString,
+          callbackfunc: callbackfunc,
+          handlerFunc: handlerFunc,
+          useCapture: useCapture
+        };
+        JSEvents.registerOrRemoveHandler(eventHandler);
+      },getNodeNameForTarget:function (target) {
+        if (!target) return '';
+        if (target == window) return '#window';
+        if (target == window.screen) return '#screen';
+        return (target && target.nodeName) ? target.nodeName : '';
+      },registerFocusEventCallback:function (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString) {
+        if (!JSEvents.focusEvent) {
+          JSEvents.focusEvent = _malloc( 256 );
+        }
+        var handlerFunc = function(event) {
+          var e = event || window.event;
+  
+          var nodeName = JSEvents.getNodeNameForTarget(e.target);
+          var id = e.target.id ? e.target.id : '';
+          stringToUTF8(nodeName, JSEvents.focusEvent + 0, 128);
+          stringToUTF8(id, JSEvents.focusEvent + 128, 128);
+          var shouldCancel = Module['dynCall_iiii'](callbackfunc, eventTypeId, JSEvents.focusEvent, userData);
+          if (shouldCancel) {
+            e.preventDefault();
+          }
+        };
+  
+        var eventHandler = {
+          target: JSEvents.findEventTarget(target),
+          allowsDeferredCalls: false,
+          eventTypeString: eventTypeString,
+          callbackfunc: callbackfunc,
+          handlerFunc: handlerFunc,
+          useCapture: useCapture
+        };
+        JSEvents.registerOrRemoveHandler(eventHandler);
+      },tick:function () {
+        if (window['performance'] && window['performance']['now']) return window['performance']['now']();
+        else return Date.now();
+      },registerDeviceOrientationEventCallback:function (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString) {
+        if (!JSEvents.deviceOrientationEvent) {
+          JSEvents.deviceOrientationEvent = _malloc( 40 );
+        }
+        var handlerFunc = function(event) {
+          var e = event || window.event;
+  
+          HEAPF64[((JSEvents.deviceOrientationEvent)>>3)]=JSEvents.tick();
+          HEAPF64[(((JSEvents.deviceOrientationEvent)+(8))>>3)]=e.alpha;
+          HEAPF64[(((JSEvents.deviceOrientationEvent)+(16))>>3)]=e.beta;
+          HEAPF64[(((JSEvents.deviceOrientationEvent)+(24))>>3)]=e.gamma;
+          HEAP32[(((JSEvents.deviceOrientationEvent)+(32))>>2)]=e.absolute;
+  
+          var shouldCancel = Module['dynCall_iiii'](callbackfunc, eventTypeId, JSEvents.deviceOrientationEvent, userData);
+          if (shouldCancel) {
+            e.preventDefault();
+          }
+        };
+  
+        var eventHandler = {
+          target: JSEvents.findEventTarget(target),
+          allowsDeferredCalls: false,
+          eventTypeString: eventTypeString,
+          callbackfunc: callbackfunc,
+          handlerFunc: handlerFunc,
+          useCapture: useCapture
+        };
+        JSEvents.registerOrRemoveHandler(eventHandler);
+      },registerDeviceMotionEventCallback:function (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString) {
+        if (!JSEvents.deviceMotionEvent) {
+          JSEvents.deviceMotionEvent = _malloc( 80 );
+        }
+        var handlerFunc = function(event) {
+          var e = event || window.event;
+  
+          HEAPF64[((JSEvents.deviceOrientationEvent)>>3)]=JSEvents.tick();
+          HEAPF64[(((JSEvents.deviceMotionEvent)+(8))>>3)]=e.acceleration.x;
+          HEAPF64[(((JSEvents.deviceMotionEvent)+(16))>>3)]=e.acceleration.y;
+          HEAPF64[(((JSEvents.deviceMotionEvent)+(24))>>3)]=e.acceleration.z;
+          HEAPF64[(((JSEvents.deviceMotionEvent)+(32))>>3)]=e.accelerationIncludingGravity.x;
+          HEAPF64[(((JSEvents.deviceMotionEvent)+(40))>>3)]=e.accelerationIncludingGravity.y;
+          HEAPF64[(((JSEvents.deviceMotionEvent)+(48))>>3)]=e.accelerationIncludingGravity.z;
+          HEAPF64[(((JSEvents.deviceMotionEvent)+(56))>>3)]=e.rotationRate.alpha;
+          HEAPF64[(((JSEvents.deviceMotionEvent)+(64))>>3)]=e.rotationRate.beta;
+          HEAPF64[(((JSEvents.deviceMotionEvent)+(72))>>3)]=e.rotationRate.gamma;
+  
+          var shouldCancel = Module['dynCall_iiii'](callbackfunc, eventTypeId, JSEvents.deviceMotionEvent, userData);
+          if (shouldCancel) {
+            e.preventDefault();
+          }
+        };
+  
+        var eventHandler = {
+          target: JSEvents.findEventTarget(target),
+          allowsDeferredCalls: false,
+          eventTypeString: eventTypeString,
+          callbackfunc: callbackfunc,
+          handlerFunc: handlerFunc,
+          useCapture: useCapture
+        };
+        JSEvents.registerOrRemoveHandler(eventHandler);
+      },screenOrientation:function () {
+        if (!window.screen) return undefined;
+        return window.screen.orientation || window.screen.mozOrientation || window.screen.webkitOrientation || window.screen.msOrientation;
+      },fillOrientationChangeEventData:function (eventStruct, e) {
+        var orientations  = ["portrait-primary", "portrait-secondary", "landscape-primary", "landscape-secondary"];
+        var orientations2 = ["portrait",         "portrait",           "landscape",         "landscape"];
+  
+        var orientationString = JSEvents.screenOrientation();
+        var orientation = orientations.indexOf(orientationString);
+        if (orientation == -1) {
+          orientation = orientations2.indexOf(orientationString);
+        }
+  
+        HEAP32[((eventStruct)>>2)]=1 << orientation;
+        HEAP32[(((eventStruct)+(4))>>2)]=window.orientation;
+      },registerOrientationChangeEventCallback:function (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString) {
+        if (!JSEvents.orientationChangeEvent) {
+          JSEvents.orientationChangeEvent = _malloc( 8 );
+        }
+  
+        if (!target) {
+          target = window.screen; // Orientation events need to be captured from 'window.screen' instead of 'window'
+        } else {
+          target = JSEvents.findEventTarget(target);
+        }
+  
+        var handlerFunc = function(event) {
+          var e = event || window.event;
+  
+          JSEvents.fillOrientationChangeEventData(JSEvents.orientationChangeEvent, e);
+  
+          var shouldCancel = Module['dynCall_iiii'](callbackfunc, eventTypeId, JSEvents.orientationChangeEvent, userData);
+          if (shouldCancel) {
+            e.preventDefault();
+          }
+        };
+  
+        if (eventTypeString == "orientationchange" && window.screen.mozOrientation !== undefined) {
+          eventTypeString = "mozorientationchange";
+        }
+  
+        var eventHandler = {
+          target: target,
+          allowsDeferredCalls: false,
+          eventTypeString: eventTypeString,
+          callbackfunc: callbackfunc,
+          handlerFunc: handlerFunc,
+          useCapture: useCapture
+        };
+        JSEvents.registerOrRemoveHandler(eventHandler);
+      },fullscreenEnabled:function () {
+        return document.fullscreenEnabled || document.mozFullScreenEnabled || document.webkitFullscreenEnabled || document.msFullscreenEnabled;
+      },fillFullscreenChangeEventData:function (eventStruct, e) {
+        var fullscreenElement = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement;
+        var isFullscreen = !!fullscreenElement;
+        HEAP32[((eventStruct)>>2)]=isFullscreen;
+        HEAP32[(((eventStruct)+(4))>>2)]=JSEvents.fullscreenEnabled();
+        // If transitioning to fullscreen, report info about the element that is now fullscreen.
+        // If transitioning to windowed mode, report info about the element that just was fullscreen.
+        var reportedElement = isFullscreen ? fullscreenElement : JSEvents.previousFullscreenElement;
+        var nodeName = JSEvents.getNodeNameForTarget(reportedElement);
+        var id = (reportedElement && reportedElement.id) ? reportedElement.id : '';
+        stringToUTF8(nodeName, eventStruct + 8, 128);
+        stringToUTF8(id, eventStruct + 136, 128);
+        HEAP32[(((eventStruct)+(264))>>2)]=reportedElement ? reportedElement.clientWidth : 0;
+        HEAP32[(((eventStruct)+(268))>>2)]=reportedElement ? reportedElement.clientHeight : 0;
+        HEAP32[(((eventStruct)+(272))>>2)]=screen.width;
+        HEAP32[(((eventStruct)+(276))>>2)]=screen.height;
+        if (isFullscreen) {
+          JSEvents.previousFullscreenElement = fullscreenElement;
+        }
+      },registerFullscreenChangeEventCallback:function (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString) {
+        if (!JSEvents.fullscreenChangeEvent) {
+          JSEvents.fullscreenChangeEvent = _malloc( 280 );
+        }
+  
+        if (!target) {
+          target = document; // Fullscreen change events need to be captured from 'document' by default instead of 'window'
+        } else {
+          target = JSEvents.findEventTarget(target);
+        }
+  
+        var handlerFunc = function(event) {
+          var e = event || window.event;
+  
+          JSEvents.fillFullscreenChangeEventData(JSEvents.fullscreenChangeEvent, e);
+  
+          var shouldCancel = Module['dynCall_iiii'](callbackfunc, eventTypeId, JSEvents.fullscreenChangeEvent, userData);
+          if (shouldCancel) {
+            e.preventDefault();
+          }
+        };
+  
+        var eventHandler = {
+          target: target,
+          allowsDeferredCalls: false,
+          eventTypeString: eventTypeString,
+          callbackfunc: callbackfunc,
+          handlerFunc: handlerFunc,
+          useCapture: useCapture
+        };
+        JSEvents.registerOrRemoveHandler(eventHandler);
+      },resizeCanvasForFullscreen:function (target, strategy) {
+        var restoreOldStyle = __registerRestoreOldStyle(target);
+        var cssWidth = strategy.softFullscreen ? window.innerWidth : screen.width;
+        var cssHeight = strategy.softFullscreen ? window.innerHeight : screen.height;
+        var rect = target.getBoundingClientRect();
+        var windowedCssWidth = rect.right - rect.left;
+        var windowedCssHeight = rect.bottom - rect.top;
+        var windowedRttWidth = target.width;
+        var windowedRttHeight = target.height;
+  
+        if (strategy.scaleMode == 3) {
+          __setLetterbox(target, (cssHeight - windowedCssHeight) / 2, (cssWidth - windowedCssWidth) / 2);
+          cssWidth = windowedCssWidth;
+          cssHeight = windowedCssHeight;
+        } else if (strategy.scaleMode == 2) {
+          if (cssWidth*windowedRttHeight < windowedRttWidth*cssHeight) {
+            var desiredCssHeight = windowedRttHeight * cssWidth / windowedRttWidth;
+            __setLetterbox(target, (cssHeight - desiredCssHeight) / 2, 0);
+            cssHeight = desiredCssHeight;
+          } else {
+            var desiredCssWidth = windowedRttWidth * cssHeight / windowedRttHeight;
+            __setLetterbox(target, 0, (cssWidth - desiredCssWidth) / 2);
+            cssWidth = desiredCssWidth;
+          }
+        }
+  
+        // If we are adding padding, must choose a background color or otherwise Chrome will give the
+        // padding a default white color. Do it only if user has not customized their own background color.
+        if (!target.style.backgroundColor) target.style.backgroundColor = 'black';
+        // IE11 does the same, but requires the color to be set in the document body.
+        if (!document.body.style.backgroundColor) document.body.style.backgroundColor = 'black'; // IE11
+        // Firefox always shows black letterboxes independent of style color.
+  
+        target.style.width = cssWidth + 'px';
+        target.style.height = cssHeight + 'px';
+  
+        if (strategy.filteringMode == 1) {
+          target.style.imageRendering = 'optimizeSpeed';
+          target.style.imageRendering = '-moz-crisp-edges';
+          target.style.imageRendering = '-o-crisp-edges';
+          target.style.imageRendering = '-webkit-optimize-contrast';
+          target.style.imageRendering = 'optimize-contrast';
+          target.style.imageRendering = 'crisp-edges';
+          target.style.imageRendering = 'pixelated';
+        }
+  
+        var dpiScale = (strategy.canvasResolutionScaleMode == 2) ? window.devicePixelRatio : 1;
+        if (strategy.canvasResolutionScaleMode != 0) {
+          target.width = cssWidth * dpiScale;
+          target.height = cssHeight * dpiScale;
+          if (target.GLctxObject) target.GLctxObject.GLctx.viewport(0, 0, target.width, target.height);
+        }
+        return restoreOldStyle;
+      },requestFullscreen:function (target, strategy) {
+        // EMSCRIPTEN_FULLSCREEN_SCALE_DEFAULT + EMSCRIPTEN_FULLSCREEN_CANVAS_SCALE_NONE is a mode where no extra logic is performed to the DOM elements.
+        if (strategy.scaleMode != 0 || strategy.canvasResolutionScaleMode != 0) {
+          JSEvents.resizeCanvasForFullscreen(target, strategy);
+        }
+  
+        if (target.requestFullscreen) {
+          target.requestFullscreen();
+        } else if (target.msRequestFullscreen) {
+          target.msRequestFullscreen();
+        } else if (target.mozRequestFullScreen) {
+          target.mozRequestFullScreen();
+        } else if (target.mozRequestFullscreen) {
+          target.mozRequestFullscreen();
+        } else if (target.webkitRequestFullscreen) {
+          target.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+        } else {
+          if (typeof JSEvents.fullscreenEnabled() === 'undefined') {
+            return -1;
+          } else {
+            return -3;
+          }
+        }
+  
+        if (strategy.canvasResizedCallback) {
+          Module['dynCall_iiii'](strategy.canvasResizedCallback, 37, 0, strategy.canvasResizedCallbackUserData);
+        }
+  
+        return 0;
+      },fillPointerlockChangeEventData:function (eventStruct, e) {
+        var pointerLockElement = document.pointerLockElement || document.mozPointerLockElement || document.webkitPointerLockElement || document.msPointerLockElement;
+        var isPointerlocked = !!pointerLockElement;
+        HEAP32[((eventStruct)>>2)]=isPointerlocked;
+        var nodeName = JSEvents.getNodeNameForTarget(pointerLockElement);
+        var id = (pointerLockElement && pointerLockElement.id) ? pointerLockElement.id : '';
+        stringToUTF8(nodeName, eventStruct + 4, 128);
+        stringToUTF8(id, eventStruct + 132, 128);
+      },registerPointerlockChangeEventCallback:function (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString) {
+        if (!JSEvents.pointerlockChangeEvent) {
+          JSEvents.pointerlockChangeEvent = _malloc( 260 );
+        }
+  
+        if (!target) {
+          target = document; // Pointer lock change events need to be captured from 'document' by default instead of 'window'
+        } else {
+          target = JSEvents.findEventTarget(target);
+        }
+  
+        var handlerFunc = function(event) {
+          var e = event || window.event;
+  
+          JSEvents.fillPointerlockChangeEventData(JSEvents.pointerlockChangeEvent, e);
+  
+          var shouldCancel = Module['dynCall_iiii'](callbackfunc, eventTypeId, JSEvents.pointerlockChangeEvent, userData);
+          if (shouldCancel) {
+            e.preventDefault();
+          }
+        };
+  
+        var eventHandler = {
+          target: target,
+          allowsDeferredCalls: false,
+          eventTypeString: eventTypeString,
+          callbackfunc: callbackfunc,
+          handlerFunc: handlerFunc,
+          useCapture: useCapture
+        };
+        JSEvents.registerOrRemoveHandler(eventHandler);
+      },registerPointerlockErrorEventCallback:function (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString) {
+        if (!target) {
+          target = document; // Pointer lock events need to be captured from 'document' by default instead of 'window'
+        } else {
+          target = JSEvents.findEventTarget(target);
+        }
+  
+        var handlerFunc = function(event) {
+          var e = event || window.event;
+  
+          var shouldCancel = Module['dynCall_iiii'](callbackfunc, eventTypeId, 0, userData);
+          if (shouldCancel) {
+            e.preventDefault();
+          }
+        };
+  
+        var eventHandler = {
+          target: target,
+          allowsDeferredCalls: false,
+          eventTypeString: eventTypeString,
+          callbackfunc: callbackfunc,
+          handlerFunc: handlerFunc,
+          useCapture: useCapture
+        };
+        JSEvents.registerOrRemoveHandler(eventHandler);
+      },requestPointerLock:function (target) {
+        if (target.requestPointerLock) {
+          target.requestPointerLock();
+        } else if (target.mozRequestPointerLock) {
+          target.mozRequestPointerLock();
+        } else if (target.webkitRequestPointerLock) {
+          target.webkitRequestPointerLock();
+        } else if (target.msRequestPointerLock) {
+          target.msRequestPointerLock();
+        } else {
+          // document.body is known to accept pointer lock, so use that to differentiate if the user passed a bad element,
+          // or if the whole browser just doesn't support the feature.
+          if (document.body.requestPointerLock || document.body.mozRequestPointerLock || document.body.webkitRequestPointerLock || document.body.msRequestPointerLock) {
+            return -3;
+          } else {
+            return -1;
+          }
+        }
+        return 0;
+      },fillVisibilityChangeEventData:function (eventStruct, e) {
+        var visibilityStates = [ "hidden", "visible", "prerender", "unloaded" ];
+        var visibilityState = visibilityStates.indexOf(document.visibilityState);
+  
+        HEAP32[((eventStruct)>>2)]=document.hidden;
+        HEAP32[(((eventStruct)+(4))>>2)]=visibilityState;
+      },registerVisibilityChangeEventCallback:function (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString) {
+        if (!JSEvents.visibilityChangeEvent) {
+          JSEvents.visibilityChangeEvent = _malloc( 8 );
+        }
+  
+        if (!target) {
+          target = document; // Visibility change events need to be captured from 'document' by default instead of 'window'
+        } else {
+          target = JSEvents.findEventTarget(target);
+        }
+  
+        var handlerFunc = function(event) {
+          var e = event || window.event;
+  
+          JSEvents.fillVisibilityChangeEventData(JSEvents.visibilityChangeEvent, e);
+  
+          var shouldCancel = Module['dynCall_iiii'](callbackfunc, eventTypeId, JSEvents.visibilityChangeEvent, userData);
+          if (shouldCancel) {
+            e.preventDefault();
+          }
+        };
+  
+        var eventHandler = {
+          target: target,
+          allowsDeferredCalls: false,
+          eventTypeString: eventTypeString,
+          callbackfunc: callbackfunc,
+          handlerFunc: handlerFunc,
+          useCapture: useCapture
+        };
+        JSEvents.registerOrRemoveHandler(eventHandler);
+      },registerTouchEventCallback:function (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString) {
+        if (!JSEvents.touchEvent) {
+          JSEvents.touchEvent = _malloc( 1684 );
+        }
+  
+        target = JSEvents.findEventTarget(target);
+  
+        var handlerFunc = function(event) {
+          var e = event || window.event;
+  
+          var touches = {};
+          for(var i = 0; i < e.touches.length; ++i) {
+            var touch = e.touches[i];
+            touches[touch.identifier] = touch;
+          }
+          for(var i = 0; i < e.changedTouches.length; ++i) {
+            var touch = e.changedTouches[i];
+            touches[touch.identifier] = touch;
+            touch.changed = true;
+          }
+          for(var i = 0; i < e.targetTouches.length; ++i) {
+            var touch = e.targetTouches[i];
+            touches[touch.identifier].onTarget = true;
+          }
+          
+          var ptr = JSEvents.touchEvent;
+          HEAP32[(((ptr)+(4))>>2)]=e.ctrlKey;
+          HEAP32[(((ptr)+(8))>>2)]=e.shiftKey;
+          HEAP32[(((ptr)+(12))>>2)]=e.altKey;
+          HEAP32[(((ptr)+(16))>>2)]=e.metaKey;
+          ptr += 20; // Advance to the start of the touch array.
+          var canvasRect = Module['canvas'] ? Module['canvas'].getBoundingClientRect() : undefined;
+          var targetRect = JSEvents.getBoundingClientRectOrZeros(target);
+          var numTouches = 0;
+          for(var i in touches) {
+            var t = touches[i];
+            HEAP32[((ptr)>>2)]=t.identifier;
+            HEAP32[(((ptr)+(4))>>2)]=t.screenX;
+            HEAP32[(((ptr)+(8))>>2)]=t.screenY;
+            HEAP32[(((ptr)+(12))>>2)]=t.clientX;
+            HEAP32[(((ptr)+(16))>>2)]=t.clientY;
+            HEAP32[(((ptr)+(20))>>2)]=t.pageX;
+            HEAP32[(((ptr)+(24))>>2)]=t.pageY;
+            HEAP32[(((ptr)+(28))>>2)]=t.changed;
+            HEAP32[(((ptr)+(32))>>2)]=t.onTarget;
+            if (canvasRect) {
+              HEAP32[(((ptr)+(44))>>2)]=t.clientX - canvasRect.left;
+              HEAP32[(((ptr)+(48))>>2)]=t.clientY - canvasRect.top;
+            } else {
+              HEAP32[(((ptr)+(44))>>2)]=0;
+              HEAP32[(((ptr)+(48))>>2)]=0;            
+            }
+            HEAP32[(((ptr)+(36))>>2)]=t.clientX - targetRect.left;
+            HEAP32[(((ptr)+(40))>>2)]=t.clientY - targetRect.top;
+            
+            ptr += 52;
+  
+            if (++numTouches >= 32) {
+              break;
+            }
+          }
+          HEAP32[((JSEvents.touchEvent)>>2)]=numTouches;
+  
+          var shouldCancel = Module['dynCall_iiii'](callbackfunc, eventTypeId, JSEvents.touchEvent, userData);
+          if (shouldCancel) {
+            e.preventDefault();
+          }
+        };
+  
+        var eventHandler = {
+          target: target,
+          allowsDeferredCalls: false, // XXX Currently disabled, see bug https://bugzilla.mozilla.org/show_bug.cgi?id=966493
+          // Once the above bug is resolved, enable the following condition if possible:
+          // allowsDeferredCalls: eventTypeString == 'touchstart',
+          eventTypeString: eventTypeString,
+          callbackfunc: callbackfunc,
+          handlerFunc: handlerFunc,
+          useCapture: useCapture
+        };
+        JSEvents.registerOrRemoveHandler(eventHandler);
+      },fillGamepadEventData:function (eventStruct, e) {
+        HEAPF64[((eventStruct)>>3)]=e.timestamp;
+        for(var i = 0; i < e.axes.length; ++i) {
+          HEAPF64[(((eventStruct+i*8)+(16))>>3)]=e.axes[i];
+        }
+        for(var i = 0; i < e.buttons.length; ++i) {
+          if (typeof(e.buttons[i]) === 'object') {
+            HEAPF64[(((eventStruct+i*8)+(528))>>3)]=e.buttons[i].value;
+          } else {
+            HEAPF64[(((eventStruct+i*8)+(528))>>3)]=e.buttons[i];
+          }
+        }
+        for(var i = 0; i < e.buttons.length; ++i) {
+          if (typeof(e.buttons[i]) === 'object') {
+            HEAP32[(((eventStruct+i*4)+(1040))>>2)]=e.buttons[i].pressed;
+          } else {
+            HEAP32[(((eventStruct+i*4)+(1040))>>2)]=e.buttons[i] == 1.0;
+          }
+        }
+        HEAP32[(((eventStruct)+(1296))>>2)]=e.connected;
+        HEAP32[(((eventStruct)+(1300))>>2)]=e.index;
+        HEAP32[(((eventStruct)+(8))>>2)]=e.axes.length;
+        HEAP32[(((eventStruct)+(12))>>2)]=e.buttons.length;
+        stringToUTF8(e.id, eventStruct + 1304, 64);
+        stringToUTF8(e.mapping, eventStruct + 1368, 64);
+      },registerGamepadEventCallback:function (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString) {
+        if (!JSEvents.gamepadEvent) {
+          JSEvents.gamepadEvent = _malloc( 1432 );
+        }
+  
+        var handlerFunc = function(event) {
+          var e = event || window.event;
+  
+          JSEvents.fillGamepadEventData(JSEvents.gamepadEvent, e.gamepad);
+  
+          var shouldCancel = Module['dynCall_iiii'](callbackfunc, eventTypeId, JSEvents.gamepadEvent, userData);
+          if (shouldCancel) {
+            e.preventDefault();
+          }
+        };
+  
+        var eventHandler = {
+          target: JSEvents.findEventTarget(target),
+          allowsDeferredCalls: true,
+          eventTypeString: eventTypeString,
+          callbackfunc: callbackfunc,
+          handlerFunc: handlerFunc,
+          useCapture: useCapture
+        };
+        JSEvents.registerOrRemoveHandler(eventHandler);
+      },registerBeforeUnloadEventCallback:function (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString) {
+        var handlerFunc = function(event) {
+          var e = event || window.event;
+  
+          var confirmationMessage = Module['dynCall_iiii'](callbackfunc, eventTypeId, 0, userData);
+          
+          if (confirmationMessage) {
+            confirmationMessage = Pointer_stringify(confirmationMessage);
+          }
+          if (confirmationMessage) {
+            e.preventDefault();
+            e.returnValue = confirmationMessage;
+            return confirmationMessage;
+          }
+        };
+  
+        var eventHandler = {
+          target: JSEvents.findEventTarget(target),
+          allowsDeferredCalls: false,
+          eventTypeString: eventTypeString,
+          callbackfunc: callbackfunc,
+          handlerFunc: handlerFunc,
+          useCapture: useCapture
+        };
+        JSEvents.registerOrRemoveHandler(eventHandler);
+      },battery:function () { return navigator.battery || navigator.mozBattery || navigator.webkitBattery; },fillBatteryEventData:function (eventStruct, e) {
+        HEAPF64[((eventStruct)>>3)]=e.chargingTime;
+        HEAPF64[(((eventStruct)+(8))>>3)]=e.dischargingTime;
+        HEAPF64[(((eventStruct)+(16))>>3)]=e.level;
+        HEAP32[(((eventStruct)+(24))>>2)]=e.charging;
+      },registerBatteryEventCallback:function (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString) {
+        if (!JSEvents.batteryEvent) {
+          JSEvents.batteryEvent = _malloc( 32 );
+        }
+  
+        var handlerFunc = function(event) {
+          var e = event || window.event;
+  
+          JSEvents.fillBatteryEventData(JSEvents.batteryEvent, JSEvents.battery());
+  
+          var shouldCancel = Module['dynCall_iiii'](callbackfunc, eventTypeId, JSEvents.batteryEvent, userData);
+          if (shouldCancel) {
+            e.preventDefault();
+          }
+        };
+  
+        var eventHandler = {
+          target: JSEvents.findEventTarget(target),
+          allowsDeferredCalls: false,
+          eventTypeString: eventTypeString,
+          callbackfunc: callbackfunc,
+          handlerFunc: handlerFunc,
+          useCapture: useCapture
+        };
+        JSEvents.registerOrRemoveHandler(eventHandler);
+      },registerWebGlEventCallback:function (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString) {
+        if (!target) {
+          target = Module['canvas'];
+        }
+        var handlerFunc = function(event) {
+          var e = event || window.event;
+  
+          var shouldCancel = Module['dynCall_iiii'](callbackfunc, eventTypeId, 0, userData);
+          if (shouldCancel) {
+            e.preventDefault();
+          }
+        };
+  
+        var eventHandler = {
+          target: JSEvents.findEventTarget(target),
+          allowsDeferredCalls: false,
+          eventTypeString: eventTypeString,
+          callbackfunc: callbackfunc,
+          handlerFunc: handlerFunc,
+          useCapture: useCapture
+        };
+        JSEvents.registerOrRemoveHandler(eventHandler);
+      }};function _emscripten_set_pointerlockchange_callback(target, userData, useCapture, callbackfunc) {
+      // TODO: Currently not supported in pthreads or in --proxy-to-worker mode. (In pthreads mode, document object is not defined)
+      if (!document || !document.body || (!document.body.requestPointerLock && !document.body.mozRequestPointerLock && !document.body.webkitRequestPointerLock && !document.body.msRequestPointerLock)) {
+        return -1;
+      }
+      if (!target) target = document;
+      else {
+        target = JSEvents.findEventTarget(target);
+        if (!target) return -4;
+      }
+      JSEvents.registerPointerlockChangeEventCallback(target, userData, useCapture, callbackfunc, 20, "pointerlockchange");
+      JSEvents.registerPointerlockChangeEventCallback(target, userData, useCapture, callbackfunc, 20, "mozpointerlockchange");
+      JSEvents.registerPointerlockChangeEventCallback(target, userData, useCapture, callbackfunc, 20, "webkitpointerlockchange");
+      JSEvents.registerPointerlockChangeEventCallback(target, userData, useCapture, callbackfunc, 20, "mspointerlockchange");
+      return 0;
+    }
 
    
   Module["_i64Subtract"] = _i64Subtract;
@@ -3443,6 +4373,7 @@ function copyTempDouble(ptr) {
     return -e.errno;
   }
   }
+JSEvents.staticInit();;
 var GLctx; GL.init();
 if (ENVIRONMENT_IS_NODE) {
     _emscripten_get_now = function _emscripten_get_now_actual() {
@@ -3518,7 +4449,7 @@ function invoke_v(index) {
 
 Module.asmGlobalArg = { "Math": Math, "Int8Array": Int8Array, "Int16Array": Int16Array, "Int32Array": Int32Array, "Uint8Array": Uint8Array, "Uint16Array": Uint16Array, "Uint32Array": Uint32Array, "Float32Array": Float32Array, "Float64Array": Float64Array, "NaN": NaN, "Infinity": Infinity };
 
-Module.asmLibraryArg = { "abort": abort, "assert": assert, "enlargeMemory": enlargeMemory, "getTotalMemory": getTotalMemory, "abortOnCannotGrowMemory": abortOnCannotGrowMemory, "abortStackOverflow": abortStackOverflow, "nullFunc_ii": nullFunc_ii, "nullFunc_iiii": nullFunc_iiii, "nullFunc_v": nullFunc_v, "invoke_ii": invoke_ii, "invoke_iiii": invoke_iiii, "invoke_v": invoke_v, "___syscall146": ___syscall146, "_glfwTerminate": _glfwTerminate, "_glfwCreateWindow": _glfwCreateWindow, "_glfwGetInputMode": _glfwGetInputMode, "_abort": _abort, "___lock": ___lock, "___syscall6": ___syscall6, "___setErrNo": ___setErrNo, "_glClearColor": _glClearColor, "___unlock": ___unlock, "_emscripten_set_main_loop_timing": _emscripten_set_main_loop_timing, "_emscripten_memcpy_big": _emscripten_memcpy_big, "___syscall54": ___syscall54, "_glfwInit": _glfwInit, "___syscall140": ___syscall140, "_glfwSetInputMode": _glfwSetInputMode, "_emscripten_set_main_loop": _emscripten_set_main_loop, "_emscripten_get_now": _emscripten_get_now, "_glClear": _glClear, "DYNAMICTOP_PTR": DYNAMICTOP_PTR, "tempDoublePtr": tempDoublePtr, "ABORT": ABORT, "STACKTOP": STACKTOP, "STACK_MAX": STACK_MAX, "cttz_i8": cttz_i8 };
+Module.asmLibraryArg = { "abort": abort, "assert": assert, "enlargeMemory": enlargeMemory, "getTotalMemory": getTotalMemory, "abortOnCannotGrowMemory": abortOnCannotGrowMemory, "abortStackOverflow": abortStackOverflow, "nullFunc_ii": nullFunc_ii, "nullFunc_iiii": nullFunc_iiii, "nullFunc_v": nullFunc_v, "invoke_ii": invoke_ii, "invoke_iiii": invoke_iiii, "invoke_v": invoke_v, "___syscall146": ___syscall146, "_glfwTerminate": _glfwTerminate, "_glfwCreateWindow": _glfwCreateWindow, "_glfwGetInputMode": _glfwGetInputMode, "_abort": _abort, "___lock": ___lock, "___syscall6": ___syscall6, "_emscripten_set_main_loop_timing": _emscripten_set_main_loop_timing, "_glClearColor": _glClearColor, "___unlock": ___unlock, "___setErrNo": ___setErrNo, "_emscripten_memcpy_big": _emscripten_memcpy_big, "___syscall54": ___syscall54, "_glfwInit": _glfwInit, "___syscall140": ___syscall140, "_glfwSetInputMode": _glfwSetInputMode, "_emscripten_set_main_loop": _emscripten_set_main_loop, "_emscripten_set_pointerlockchange_callback": _emscripten_set_pointerlockchange_callback, "_emscripten_get_now": _emscripten_get_now, "_glClear": _glClear, "DYNAMICTOP_PTR": DYNAMICTOP_PTR, "tempDoublePtr": tempDoublePtr, "ABORT": ABORT, "STACKTOP": STACKTOP, "STACK_MAX": STACK_MAX, "cttz_i8": cttz_i8 };
 // EMSCRIPTEN_START_ASM
 var asm = (function(global, env, buffer) {
   'almost asm';
@@ -3586,16 +4517,17 @@ var asm = (function(global, env, buffer) {
   var _abort=env._abort;
   var ___lock=env.___lock;
   var ___syscall6=env.___syscall6;
-  var ___setErrNo=env.___setErrNo;
+  var _emscripten_set_main_loop_timing=env._emscripten_set_main_loop_timing;
   var _glClearColor=env._glClearColor;
   var ___unlock=env.___unlock;
-  var _emscripten_set_main_loop_timing=env._emscripten_set_main_loop_timing;
+  var ___setErrNo=env.___setErrNo;
   var _emscripten_memcpy_big=env._emscripten_memcpy_big;
   var ___syscall54=env.___syscall54;
   var _glfwInit=env._glfwInit;
   var ___syscall140=env.___syscall140;
   var _glfwSetInputMode=env._glfwSetInputMode;
   var _emscripten_set_main_loop=env._emscripten_set_main_loop;
+  var _emscripten_set_pointerlockchange_callback=env._emscripten_set_pointerlockchange_callback;
   var _emscripten_get_now=env._emscripten_get_now;
   var _glClear=env._glClear;
   var tempFloat = 0.0;
@@ -3650,7 +4582,7 @@ function _render() {
  $vararg_buffer = sp;
  _glClearColor(0.5,0.5,0.5,1.0);
  _glClear(16384);
- $1 = HEAP32[717]|0;
+ $1 = HEAP32[725]|0;
  $2 = (_glfwGetInputMode(($1|0),208897)|0);
  $3 = ($2|0)==(212995);
  $4 = $3&1;
@@ -3668,6 +4600,23 @@ function _render() {
  (_printf(388,$vararg_buffer)|0);
  STACKTOP = sp;return;
 }
+function _on_pointerlockchange($0,$1,$2) {
+ $0 = $0|0;
+ $1 = $1|0;
+ $2 = $2|0;
+ var $3 = 0, $4 = 0, $5 = 0, $6 = 0, $7 = 0, $vararg_buffer = 0, label = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 16|0; if ((STACKTOP|0) >= (STACK_MAX|0)) abortStackOverflow(16|0);
+ $vararg_buffer = sp;
+ $3 = $0;
+ $4 = $1;
+ $5 = $2;
+ $6 = $4;
+ $7 = HEAP32[$6>>2]|0;
+ HEAP32[$vararg_buffer>>2] = $7;
+ (_printf(414,$vararg_buffer)|0);
+ STACKTOP = sp;return 0;
+}
 function _main() {
  var $0 = 0, $1 = 0, $2 = 0, $3 = 0, $4 = 0, $5 = 0, $6 = 0, $7 = 0, label = 0, sp = 0;
  sp = STACKTOP;
@@ -3675,35 +4624,36 @@ function _main() {
  $0 = 0;
  $1 = (_glfwInit()|0);
  $2 = ($1|0)!=(0);
- do {
-  if ($2) {
-   $3 = (_glfwCreateWindow(640,480,(414|0),(0|0),(0|0))|0);
-   HEAP32[717] = $3;
-   $4 = HEAP32[717]|0;
-   $5 = ($4|0)!=(0|0);
-   if ($5) {
-    $6 = HEAP32[717]|0;
-    _glfwSetInputMode(($6|0),208897,212995);
-    _emscripten_set_main_loop((4|0),0,1);
-    _glfwTerminate();
-    $0 = 0;
-    break;
-   } else {
-    _glfwTerminate();
-    $0 = -1;
-    break;
-   }
-  } else {
-   $0 = -1;
-  }
- } while(0);
- $7 = $0;
- STACKTOP = sp;return ($7|0);
+ if (!($2)) {
+  $0 = -1;
+  $7 = $0;
+  STACKTOP = sp;return ($7|0);
+ }
+ $3 = (_glfwCreateWindow(640,480,(446|0),(0|0),(0|0))|0);
+ HEAP32[725] = $3;
+ $4 = HEAP32[725]|0;
+ $5 = ($4|0)!=(0|0);
+ if ($5) {
+  $6 = HEAP32[725]|0;
+  _glfwSetInputMode(($6|0),208897,212995);
+  (_emscripten_set_pointerlockchange_callback((0|0),(0|0),0,(4|0))|0);
+  _emscripten_set_main_loop((5|0),0,1);
+  _glfwTerminate();
+  $0 = 0;
+  $7 = $0;
+  STACKTOP = sp;return ($7|0);
+ } else {
+  _glfwTerminate();
+  $0 = -1;
+  $7 = $0;
+  STACKTOP = sp;return ($7|0);
+ }
+ return (0)|0;
 }
 function _emscripten_get_global_libc() {
  var label = 0, sp = 0;
  sp = STACKTOP;
- return (2872|0);
+ return (2904|0);
 }
 function ___stdio_close($0) {
  $0 = $0|0;
@@ -3914,7 +4864,7 @@ function ___stdout_write($0,$1,$2) {
  $vararg_buffer = sp;
  $3 = sp + 16|0;
  $4 = ((($0)) + 36|0);
- HEAP32[$4>>2] = 5;
+ HEAP32[$4>>2] = 6;
  $5 = HEAP32[$0>>2]|0;
  $6 = $5 & 64;
  $7 = ($6|0)==(0);
@@ -4408,7 +5358,7 @@ function _printf_core($0,$1,$2,$3,$4) {
    $133 = HEAP8[$128>>0]|0;
    $134 = $133 << 24 >> 24;
    $135 = (($134) + -65)|0;
-   $136 = ((440 + (($$0252*58)|0)|0) + ($135)|0);
+   $136 = ((472 + (($$0252*58)|0)|0) + ($135)|0);
    $137 = HEAP8[$136>>0]|0;
    $138 = $137&255;
    $139 = (($138) + -1)|0;
@@ -4586,7 +5536,7 @@ function _printf_core($0,$1,$2,$3,$4) {
     $222 = (($220) + 1)|0;
     $223 = $218 | $221;
     $$0254$$0254$ = $223 ? $$0254 : $222;
-    $$0228 = $216;$$1233 = 0;$$1238 = 904;$$2256 = $$0254$$0254$;$$4266 = $$1263$;$248 = $212;$250 = $215;
+    $$0228 = $216;$$1233 = 0;$$1238 = 936;$$2256 = $$0254$$0254$;$$4266 = $$1263$;$248 = $212;$250 = $215;
     label = 67;
     break;
    }
@@ -4607,7 +5557,7 @@ function _printf_core($0,$1,$2,$3,$4) {
      $235 = (($233) + 4)|0;
      $236 = $235;
      HEAP32[$236>>2] = $232;
-     $$0232 = 1;$$0237 = 904;$242 = $231;$243 = $232;
+     $$0232 = 1;$$0237 = 936;$242 = $231;$243 = $232;
      label = 66;
      break L71;
     } else {
@@ -4615,8 +5565,8 @@ function _printf_core($0,$1,$2,$3,$4) {
      $238 = ($237|0)==(0);
      $239 = $$1263$ & 1;
      $240 = ($239|0)==(0);
-     $$ = $240 ? 904 : (906);
-     $$$ = $238 ? $$ : (905);
+     $$ = $240 ? 936 : (938);
+     $$$ = $238 ? $$ : (937);
      $241 = $$1263$ & 2049;
      $narrow = ($241|0)!=(0);
      $$284$ = $narrow&1;
@@ -4633,7 +5583,7 @@ function _printf_core($0,$1,$2,$3,$4) {
     $168 = (($165) + 4)|0;
     $169 = $168;
     $170 = HEAP32[$169>>2]|0;
-    $$0232 = 0;$$0237 = 904;$242 = $167;$243 = $170;
+    $$0232 = 0;$$0237 = 936;$242 = $167;$243 = $170;
     label = 66;
     break;
    }
@@ -4646,7 +5596,7 @@ function _printf_core($0,$1,$2,$3,$4) {
     $264 = HEAP32[$263>>2]|0;
     $265 = $261&255;
     HEAP8[$13>>0] = $265;
-    $$2 = $13;$$2234 = 0;$$2239 = 904;$$2251 = $11;$$5 = 1;$$6268 = $164;
+    $$2 = $13;$$2234 = 0;$$2239 = 936;$$2251 = $11;$$5 = 1;$$6268 = $164;
     break;
    }
    case 109:  {
@@ -4660,7 +5610,7 @@ function _printf_core($0,$1,$2,$3,$4) {
    case 115:  {
     $269 = HEAP32[$6>>2]|0;
     $270 = ($269|0)!=(0|0);
-    $271 = $270 ? $269 : 914;
+    $271 = $270 ? $269 : 946;
     $$1 = $271;
     label = 71;
     break;
@@ -4700,7 +5650,7 @@ function _printf_core($0,$1,$2,$3,$4) {
     break;
    }
    default: {
-    $$2 = $21;$$2234 = 0;$$2239 = 904;$$2251 = $11;$$5 = $$0254;$$6268 = $$1263$;
+    $$2 = $21;$$2234 = 0;$$2239 = 936;$$2251 = $11;$$5 = $$0254;$$6268 = $$1263$;
    }
    }
   } while(0);
@@ -4722,8 +5672,8 @@ function _printf_core($0,$1,$2,$3,$4) {
     $207 = ($206|0)==(0);
     $or$cond283 = $207 | $205;
     $208 = $$1236 >> 4;
-    $209 = (904 + ($208)|0);
-    $$289 = $or$cond283 ? 904 : $209;
+    $209 = (936 + ($208)|0);
+    $$289 = $or$cond283 ? 936 : $209;
     $$290 = $or$cond283 ? 0 : 2;
     $$0228 = $202;$$1233 = $$290;$$1238 = $$289;$$2256 = $$1255;$$4266 = $$3265;$248 = $197;$250 = $200;
     label = 67;
@@ -4744,7 +5694,7 @@ function _printf_core($0,$1,$2,$3,$4) {
     $277 = (($$1) + ($$0254)|0);
     $$3257 = $273 ? $$0254 : $276;
     $$1250 = $273 ? $277 : $272;
-    $$2 = $$1;$$2234 = 0;$$2239 = 904;$$2251 = $$1250;$$5 = $$3257;$$6268 = $164;
+    $$2 = $$1;$$2234 = 0;$$2239 = 936;$$2251 = $$1250;$$5 = $$3257;$$6268 = $164;
    }
    else if ((label|0) == 75) {
     label = 0;
@@ -5274,7 +6224,7 @@ function _fmt_x($0,$1,$2,$3) {
   $$056 = $2;$15 = $1;$8 = $0;
   while(1) {
    $7 = $8 & 15;
-   $9 = (956 + ($7)|0);
+   $9 = (988 + ($7)|0);
    $10 = HEAP8[$9>>0]|0;
    $11 = $10&255;
    $12 = $11 | $3;
@@ -5632,14 +6582,14 @@ function _fmt_fp($0,$1,$2,$3,$4,$5) {
  $13 = ($12|0)<(0);
  if ($13) {
   $14 = -$1;
-  $$0471 = $14;$$0520 = 1;$$0521 = 921;
+  $$0471 = $14;$$0520 = 1;$$0521 = 953;
  } else {
   $15 = $4 & 2048;
   $16 = ($15|0)==(0);
   $17 = $4 & 1;
   $18 = ($17|0)==(0);
-  $$ = $18 ? (922) : (927);
-  $$$ = $16 ? $$ : (924);
+  $$ = $18 ? (954) : (959);
+  $$$ = $16 ? $$ : (956);
   $19 = $4 & 2049;
   $narrow = ($19|0)!=(0);
   $$534$ = $narrow&1;
@@ -5738,7 +6688,7 @@ function _fmt_fp($0,$1,$2,$3,$4,$5) {
     $$0523 = $8;$$2473 = $$1472;
     while(1) {
      $80 = (~~(($$2473)));
-     $81 = (956 + ($80)|0);
+     $81 = (988 + ($80)|0);
      $82 = HEAP8[$81>>0]|0;
      $83 = $82&255;
      $84 = $83 | $42;
@@ -6349,7 +7299,7 @@ function _fmt_fp($0,$1,$2,$3,$4,$5) {
     }
     $339 = ($289|0)==(0);
     if (!($339)) {
-     _out($0,972,1);
+     _out($0,1004,1);
     }
     $340 = ($337>>>0)<($$7505>>>0);
     $341 = ($$3477|0)>(0);
@@ -6430,7 +7380,7 @@ function _fmt_fp($0,$1,$2,$3,$4,$5) {
          $$2 = $372;
          break;
         }
-        _out($0,972,1);
+        _out($0,1004,1);
         $$2 = $372;
        } else {
         $369 = ($$0>>>0)>($8>>>0);
@@ -6487,9 +7437,9 @@ function _fmt_fp($0,$1,$2,$3,$4,$5) {
   } else {
    $27 = $5 & 32;
    $28 = ($27|0)!=(0);
-   $29 = $28 ? 940 : 944;
+   $29 = $28 ? 972 : 976;
    $30 = ($$0471 != $$0471) | (0.0 != 0.0);
-   $31 = $28 ? 948 : 952;
+   $31 = $28 ? 980 : 984;
    $$0510 = $30 ? $31 : $29;
    $32 = (($$0520) + 3)|0;
    $33 = $4 & -65537;
@@ -6699,7 +7649,7 @@ function ___strerror_l($0,$1) {
  sp = STACKTOP;
  $$016 = 0;
  while(1) {
-  $3 = (974 + ($$016)|0);
+  $3 = (1006 + ($$016)|0);
   $4 = HEAP8[$3>>0]|0;
   $5 = $4&255;
   $6 = ($5|0)==($0|0);
@@ -6710,7 +7660,7 @@ function ___strerror_l($0,$1) {
   $7 = (($$016) + 1)|0;
   $8 = ($7|0)==(87);
   if ($8) {
-   $$01214 = 1062;$$115 = 87;
+   $$01214 = 1094;$$115 = 87;
    label = 5;
    break;
   } else {
@@ -6720,9 +7670,9 @@ function ___strerror_l($0,$1) {
  if ((label|0) == 2) {
   $2 = ($$016|0)==(0);
   if ($2) {
-   $$012$lcssa = 1062;
+   $$012$lcssa = 1094;
   } else {
-   $$01214 = 1062;$$115 = $$016;
+   $$01214 = 1094;$$115 = $$016;
    label = 5;
   }
  }
@@ -7041,13 +7991,13 @@ function ___towrite($0) {
 function ___ofl_lock() {
  var label = 0, sp = 0;
  sp = STACKTOP;
- ___lock((2936|0));
- return (2944|0);
+ ___lock((2968|0));
+ return (2976|0);
 }
 function ___ofl_unlock() {
  var label = 0, sp = 0;
  sp = STACKTOP;
- ___unlock((2936|0));
+ ___unlock((2968|0));
  return;
 }
 function _fflush($0) {
@@ -7267,7 +8217,7 @@ function _malloc($0) {
    $5 = $4 & -8;
    $6 = $3 ? 16 : $5;
    $7 = $6 >>> 3;
-   $8 = HEAP32[737]|0;
+   $8 = HEAP32[745]|0;
    $9 = $8 >>> $7;
    $10 = $9 & 3;
    $11 = ($10|0)==(0);
@@ -7276,7 +8226,7 @@ function _malloc($0) {
     $13 = $12 ^ 1;
     $14 = (($13) + ($7))|0;
     $15 = $14 << 1;
-    $16 = (2988 + ($15<<2)|0);
+    $16 = (3020 + ($15<<2)|0);
     $17 = ((($16)) + 8|0);
     $18 = HEAP32[$17>>2]|0;
     $19 = ((($18)) + 8|0);
@@ -7287,9 +8237,9 @@ function _malloc($0) {
       $22 = 1 << $14;
       $23 = $22 ^ -1;
       $24 = $8 & $23;
-      HEAP32[737] = $24;
+      HEAP32[745] = $24;
      } else {
-      $25 = HEAP32[(2964)>>2]|0;
+      $25 = HEAP32[(2996)>>2]|0;
       $26 = ($20>>>0)<($25>>>0);
       if ($26) {
        _abort();
@@ -7320,7 +8270,7 @@ function _malloc($0) {
     $$0 = $19;
     STACKTOP = sp;return ($$0|0);
    }
-   $37 = HEAP32[(2956)>>2]|0;
+   $37 = HEAP32[(2988)>>2]|0;
    $38 = ($6>>>0)>($37>>>0);
    if ($38) {
     $39 = ($9|0)==(0);
@@ -7354,7 +8304,7 @@ function _malloc($0) {
      $66 = $62 >>> $64;
      $67 = (($65) + ($66))|0;
      $68 = $67 << 1;
-     $69 = (2988 + ($68<<2)|0);
+     $69 = (3020 + ($68<<2)|0);
      $70 = ((($69)) + 8|0);
      $71 = HEAP32[$70>>2]|0;
      $72 = ((($71)) + 8|0);
@@ -7365,10 +8315,10 @@ function _malloc($0) {
        $75 = 1 << $67;
        $76 = $75 ^ -1;
        $77 = $8 & $76;
-       HEAP32[737] = $77;
+       HEAP32[745] = $77;
        $98 = $77;
       } else {
-       $78 = HEAP32[(2964)>>2]|0;
+       $78 = HEAP32[(2996)>>2]|0;
        $79 = ($73>>>0)<($78>>>0);
        if ($79) {
         _abort();
@@ -7401,22 +8351,22 @@ function _malloc($0) {
      HEAP32[$90>>2] = $84;
      $91 = ($37|0)==(0);
      if (!($91)) {
-      $92 = HEAP32[(2968)>>2]|0;
+      $92 = HEAP32[(3000)>>2]|0;
       $93 = $37 >>> 3;
       $94 = $93 << 1;
-      $95 = (2988 + ($94<<2)|0);
+      $95 = (3020 + ($94<<2)|0);
       $96 = 1 << $93;
       $97 = $98 & $96;
       $99 = ($97|0)==(0);
       if ($99) {
        $100 = $98 | $96;
-       HEAP32[737] = $100;
+       HEAP32[745] = $100;
        $$pre = ((($95)) + 8|0);
        $$0199 = $95;$$pre$phiZ2D = $$pre;
       } else {
        $101 = ((($95)) + 8|0);
        $102 = HEAP32[$101>>2]|0;
-       $103 = HEAP32[(2964)>>2]|0;
+       $103 = HEAP32[(2996)>>2]|0;
        $104 = ($102>>>0)<($103>>>0);
        if ($104) {
         _abort();
@@ -7433,12 +8383,12 @@ function _malloc($0) {
       $107 = ((($92)) + 12|0);
       HEAP32[$107>>2] = $95;
      }
-     HEAP32[(2956)>>2] = $84;
-     HEAP32[(2968)>>2] = $87;
+     HEAP32[(2988)>>2] = $84;
+     HEAP32[(3000)>>2] = $87;
      $$0 = $72;
      STACKTOP = sp;return ($$0|0);
     }
-    $108 = HEAP32[(2952)>>2]|0;
+    $108 = HEAP32[(2984)>>2]|0;
     $109 = ($108|0)==(0);
     if ($109) {
      $$0197 = $6;
@@ -7466,7 +8416,7 @@ function _malloc($0) {
      $130 = $126 | $129;
      $131 = $127 >>> $129;
      $132 = (($130) + ($131))|0;
-     $133 = (3252 + ($132<<2)|0);
+     $133 = (3284 + ($132<<2)|0);
      $134 = HEAP32[$133>>2]|0;
      $135 = ((($134)) + 4|0);
      $136 = HEAP32[$135>>2]|0;
@@ -7506,7 +8456,7 @@ function _malloc($0) {
        }
       }
      }
-     $155 = HEAP32[(2964)>>2]|0;
+     $155 = HEAP32[(2996)>>2]|0;
      $156 = ($$0192$lcssa$i>>>0)<($155>>>0);
      if ($156) {
       _abort();
@@ -7601,7 +8551,7 @@ function _malloc($0) {
       if (!($186)) {
        $187 = ((($$0192$lcssa$i)) + 28|0);
        $188 = HEAP32[$187>>2]|0;
-       $189 = (3252 + ($188<<2)|0);
+       $189 = (3284 + ($188<<2)|0);
        $190 = HEAP32[$189>>2]|0;
        $191 = ($$0192$lcssa$i|0)==($190|0);
        do {
@@ -7612,11 +8562,11 @@ function _malloc($0) {
           $192 = 1 << $188;
           $193 = $192 ^ -1;
           $194 = $108 & $193;
-          HEAP32[(2952)>>2] = $194;
+          HEAP32[(2984)>>2] = $194;
           break L73;
          }
         } else {
-         $195 = HEAP32[(2964)>>2]|0;
+         $195 = HEAP32[(2996)>>2]|0;
          $196 = ($160>>>0)<($195>>>0);
          if ($196) {
           _abort();
@@ -7637,7 +8587,7 @@ function _malloc($0) {
          }
         }
        } while(0);
-       $201 = HEAP32[(2964)>>2]|0;
+       $201 = HEAP32[(2996)>>2]|0;
        $202 = ($$3$i>>>0)<($201>>>0);
        if ($202) {
         _abort();
@@ -7667,7 +8617,7 @@ function _malloc($0) {
        $211 = HEAP32[$210>>2]|0;
        $212 = ($211|0)==(0|0);
        if (!($212)) {
-        $213 = HEAP32[(2964)>>2]|0;
+        $213 = HEAP32[(2996)>>2]|0;
         $214 = ($211>>>0)<($213>>>0);
         if ($214) {
          _abort();
@@ -7704,22 +8654,22 @@ function _malloc($0) {
       HEAP32[$229>>2] = $$0193$lcssa$i;
       $230 = ($37|0)==(0);
       if (!($230)) {
-       $231 = HEAP32[(2968)>>2]|0;
+       $231 = HEAP32[(3000)>>2]|0;
        $232 = $37 >>> 3;
        $233 = $232 << 1;
-       $234 = (2988 + ($233<<2)|0);
+       $234 = (3020 + ($233<<2)|0);
        $235 = 1 << $232;
        $236 = $8 & $235;
        $237 = ($236|0)==(0);
        if ($237) {
         $238 = $8 | $235;
-        HEAP32[737] = $238;
+        HEAP32[745] = $238;
         $$pre$i = ((($234)) + 8|0);
         $$0189$i = $234;$$pre$phi$iZ2D = $$pre$i;
        } else {
         $239 = ((($234)) + 8|0);
         $240 = HEAP32[$239>>2]|0;
-        $241 = HEAP32[(2964)>>2]|0;
+        $241 = HEAP32[(2996)>>2]|0;
         $242 = ($240>>>0)<($241>>>0);
         if ($242) {
          _abort();
@@ -7736,8 +8686,8 @@ function _malloc($0) {
        $245 = ((($231)) + 12|0);
        HEAP32[$245>>2] = $234;
       }
-      HEAP32[(2956)>>2] = $$0193$lcssa$i;
-      HEAP32[(2968)>>2] = $157;
+      HEAP32[(2988)>>2] = $$0193$lcssa$i;
+      HEAP32[(3000)>>2] = $157;
      }
      $246 = ((($$0192$lcssa$i)) + 8|0);
      $$0 = $246;
@@ -7753,7 +8703,7 @@ function _malloc($0) {
    } else {
     $248 = (($0) + 11)|0;
     $249 = $248 & -8;
-    $250 = HEAP32[(2952)>>2]|0;
+    $250 = HEAP32[(2984)>>2]|0;
     $251 = ($250|0)==(0);
     if ($251) {
      $$0197 = $249;
@@ -7793,7 +8743,7 @@ function _malloc($0) {
        $$0358$i = $277;
       }
      }
-     $278 = (3252 + ($$0358$i<<2)|0);
+     $278 = (3284 + ($$0358$i<<2)|0);
      $279 = HEAP32[$278>>2]|0;
      $280 = ($279|0)==(0|0);
      L117: do {
@@ -7885,7 +8835,7 @@ function _malloc($0) {
        $328 = $324 | $327;
        $329 = $325 >>> $327;
        $330 = (($328) + ($329))|0;
-       $331 = (3252 + ($330<<2)|0);
+       $331 = (3284 + ($330<<2)|0);
        $332 = HEAP32[$331>>2]|0;
        $$4$ph$i = 0;$$4357$ph$i = $332;
       } else {
@@ -7929,11 +8879,11 @@ function _malloc($0) {
      if ($344) {
       $$0197 = $249;
      } else {
-      $345 = HEAP32[(2956)>>2]|0;
+      $345 = HEAP32[(2988)>>2]|0;
       $346 = (($345) - ($249))|0;
       $347 = ($$4351$lcssa$i>>>0)<($346>>>0);
       if ($347) {
-       $348 = HEAP32[(2964)>>2]|0;
+       $348 = HEAP32[(2996)>>2]|0;
        $349 = ($$4$lcssa$i>>>0)<($348>>>0);
        if ($349) {
         _abort();
@@ -8030,7 +8980,7 @@ function _malloc($0) {
         } else {
          $380 = ((($$4$lcssa$i)) + 28|0);
          $381 = HEAP32[$380>>2]|0;
-         $382 = (3252 + ($381<<2)|0);
+         $382 = (3284 + ($381<<2)|0);
          $383 = HEAP32[$382>>2]|0;
          $384 = ($$4$lcssa$i|0)==($383|0);
          do {
@@ -8041,12 +8991,12 @@ function _malloc($0) {
             $385 = 1 << $381;
             $386 = $385 ^ -1;
             $387 = $250 & $386;
-            HEAP32[(2952)>>2] = $387;
+            HEAP32[(2984)>>2] = $387;
             $470 = $387;
             break L164;
            }
           } else {
-           $388 = HEAP32[(2964)>>2]|0;
+           $388 = HEAP32[(2996)>>2]|0;
            $389 = ($353>>>0)<($388>>>0);
            if ($389) {
             _abort();
@@ -8068,7 +9018,7 @@ function _malloc($0) {
            }
           }
          } while(0);
-         $394 = HEAP32[(2964)>>2]|0;
+         $394 = HEAP32[(2996)>>2]|0;
          $395 = ($$3372$i>>>0)<($394>>>0);
          if ($395) {
           _abort();
@@ -8100,7 +9050,7 @@ function _malloc($0) {
          if ($405) {
           $470 = $250;
          } else {
-          $406 = HEAP32[(2964)>>2]|0;
+          $406 = HEAP32[(2996)>>2]|0;
           $407 = ($404>>>0)<($406>>>0);
           if ($407) {
            _abort();
@@ -8141,20 +9091,20 @@ function _malloc($0) {
          $424 = ($$4351$lcssa$i>>>0)<(256);
          if ($424) {
           $425 = $423 << 1;
-          $426 = (2988 + ($425<<2)|0);
-          $427 = HEAP32[737]|0;
+          $426 = (3020 + ($425<<2)|0);
+          $427 = HEAP32[745]|0;
           $428 = 1 << $423;
           $429 = $427 & $428;
           $430 = ($429|0)==(0);
           if ($430) {
            $431 = $427 | $428;
-           HEAP32[737] = $431;
+           HEAP32[745] = $431;
            $$pre$i210 = ((($426)) + 8|0);
            $$0368$i = $426;$$pre$phi$i211Z2D = $$pre$i210;
           } else {
            $432 = ((($426)) + 8|0);
            $433 = HEAP32[$432>>2]|0;
-           $434 = HEAP32[(2964)>>2]|0;
+           $434 = HEAP32[(2996)>>2]|0;
            $435 = ($433>>>0)<($434>>>0);
            if ($435) {
             _abort();
@@ -8206,7 +9156,7 @@ function _malloc($0) {
            $$0361$i = $463;
           }
          }
-         $464 = (3252 + ($$0361$i<<2)|0);
+         $464 = (3284 + ($$0361$i<<2)|0);
          $465 = ((($350)) + 28|0);
          HEAP32[$465>>2] = $$0361$i;
          $466 = ((($350)) + 16|0);
@@ -8218,7 +9168,7 @@ function _malloc($0) {
          $471 = ($469|0)==(0);
          if ($471) {
           $472 = $470 | $468;
-          HEAP32[(2952)>>2] = $472;
+          HEAP32[(2984)>>2] = $472;
           HEAP32[$464>>2] = $350;
           $473 = ((($350)) + 24|0);
           HEAP32[$473>>2] = $464;
@@ -8257,7 +9207,7 @@ function _malloc($0) {
           }
          }
          if ((label|0) == 136) {
-          $491 = HEAP32[(2964)>>2]|0;
+          $491 = HEAP32[(2996)>>2]|0;
           $492 = ($487>>>0)<($491>>>0);
           if ($492) {
            _abort();
@@ -8276,7 +9226,7 @@ function _malloc($0) {
          else if ((label|0) == 139) {
           $496 = ((($$0345$i)) + 8|0);
           $497 = HEAP32[$496>>2]|0;
-          $498 = HEAP32[(2964)>>2]|0;
+          $498 = HEAP32[(2996)>>2]|0;
           $499 = ($497>>>0)>=($498>>>0);
           $not$9$i = ($$0345$i>>>0)>=($498>>>0);
           $500 = $499 & $not$9$i;
@@ -8309,16 +9259,16 @@ function _malloc($0) {
    }
   }
  } while(0);
- $506 = HEAP32[(2956)>>2]|0;
+ $506 = HEAP32[(2988)>>2]|0;
  $507 = ($506>>>0)<($$0197>>>0);
  if (!($507)) {
   $508 = (($506) - ($$0197))|0;
-  $509 = HEAP32[(2968)>>2]|0;
+  $509 = HEAP32[(3000)>>2]|0;
   $510 = ($508>>>0)>(15);
   if ($510) {
    $511 = (($509) + ($$0197)|0);
-   HEAP32[(2968)>>2] = $511;
-   HEAP32[(2956)>>2] = $508;
+   HEAP32[(3000)>>2] = $511;
+   HEAP32[(2988)>>2] = $508;
    $512 = $508 | 1;
    $513 = ((($511)) + 4|0);
    HEAP32[$513>>2] = $512;
@@ -8328,8 +9278,8 @@ function _malloc($0) {
    $516 = ((($509)) + 4|0);
    HEAP32[$516>>2] = $515;
   } else {
-   HEAP32[(2956)>>2] = 0;
-   HEAP32[(2968)>>2] = 0;
+   HEAP32[(2988)>>2] = 0;
+   HEAP32[(3000)>>2] = 0;
    $517 = $506 | 3;
    $518 = ((($509)) + 4|0);
    HEAP32[$518>>2] = $517;
@@ -8343,14 +9293,14 @@ function _malloc($0) {
   $$0 = $523;
   STACKTOP = sp;return ($$0|0);
  }
- $524 = HEAP32[(2960)>>2]|0;
+ $524 = HEAP32[(2992)>>2]|0;
  $525 = ($524>>>0)>($$0197>>>0);
  if ($525) {
   $526 = (($524) - ($$0197))|0;
-  HEAP32[(2960)>>2] = $526;
-  $527 = HEAP32[(2972)>>2]|0;
+  HEAP32[(2992)>>2] = $526;
+  $527 = HEAP32[(3004)>>2]|0;
   $528 = (($527) + ($$0197)|0);
-  HEAP32[(2972)>>2] = $528;
+  HEAP32[(3004)>>2] = $528;
   $529 = $526 | 1;
   $530 = ((($528)) + 4|0);
   HEAP32[$530>>2] = $529;
@@ -8361,23 +9311,23 @@ function _malloc($0) {
   $$0 = $533;
   STACKTOP = sp;return ($$0|0);
  }
- $534 = HEAP32[855]|0;
+ $534 = HEAP32[863]|0;
  $535 = ($534|0)==(0);
  if ($535) {
-  HEAP32[(3428)>>2] = 4096;
-  HEAP32[(3424)>>2] = 4096;
-  HEAP32[(3432)>>2] = -1;
-  HEAP32[(3436)>>2] = -1;
-  HEAP32[(3440)>>2] = 0;
-  HEAP32[(3392)>>2] = 0;
+  HEAP32[(3460)>>2] = 4096;
+  HEAP32[(3456)>>2] = 4096;
+  HEAP32[(3464)>>2] = -1;
+  HEAP32[(3468)>>2] = -1;
+  HEAP32[(3472)>>2] = 0;
+  HEAP32[(3424)>>2] = 0;
   $536 = $1;
   $537 = $536 & -16;
   $538 = $537 ^ 1431655768;
   HEAP32[$1>>2] = $538;
-  HEAP32[855] = $538;
+  HEAP32[863] = $538;
   $542 = 4096;
  } else {
-  $$pre$i212 = HEAP32[(3428)>>2]|0;
+  $$pre$i212 = HEAP32[(3460)>>2]|0;
   $542 = $$pre$i212;
  }
  $539 = (($$0197) + 48)|0;
@@ -8390,10 +9340,10 @@ function _malloc($0) {
   $$0 = 0;
   STACKTOP = sp;return ($$0|0);
  }
- $546 = HEAP32[(3388)>>2]|0;
+ $546 = HEAP32[(3420)>>2]|0;
  $547 = ($546|0)==(0);
  if (!($547)) {
-  $548 = HEAP32[(3380)>>2]|0;
+  $548 = HEAP32[(3412)>>2]|0;
   $549 = (($548) + ($544))|0;
   $550 = ($549>>>0)<=($548>>>0);
   $551 = ($549>>>0)>($546>>>0);
@@ -8403,18 +9353,18 @@ function _malloc($0) {
    STACKTOP = sp;return ($$0|0);
   }
  }
- $552 = HEAP32[(3392)>>2]|0;
+ $552 = HEAP32[(3424)>>2]|0;
  $553 = $552 & 4;
  $554 = ($553|0)==(0);
  L244: do {
   if ($554) {
-   $555 = HEAP32[(2972)>>2]|0;
+   $555 = HEAP32[(3004)>>2]|0;
    $556 = ($555|0)==(0|0);
    L246: do {
     if ($556) {
      label = 163;
     } else {
-     $$0$i$i = (3396);
+     $$0$i$i = (3428);
      while(1) {
       $557 = HEAP32[$$0$i$i>>2]|0;
       $558 = ($557>>>0)>($555>>>0);
@@ -8472,7 +9422,7 @@ function _malloc($0) {
       $$2234253237$i = 0;
      } else {
       $568 = $566;
-      $569 = HEAP32[(3424)>>2]|0;
+      $569 = HEAP32[(3456)>>2]|0;
       $570 = (($569) + -1)|0;
       $571 = $570 & $568;
       $572 = ($571|0)==(0);
@@ -8482,13 +9432,13 @@ function _malloc($0) {
       $576 = (($575) - ($568))|0;
       $577 = $572 ? 0 : $576;
       $$$i = (($577) + ($544))|0;
-      $578 = HEAP32[(3380)>>2]|0;
+      $578 = HEAP32[(3412)>>2]|0;
       $579 = (($$$i) + ($578))|0;
       $580 = ($$$i>>>0)>($$0197>>>0);
       $581 = ($$$i>>>0)<(2147483647);
       $or$cond$i214 = $580 & $581;
       if ($or$cond$i214) {
-       $582 = HEAP32[(3388)>>2]|0;
+       $582 = HEAP32[(3420)>>2]|0;
        $583 = ($582|0)==(0);
        if (!($583)) {
         $584 = ($579>>>0)<=($578>>>0);
@@ -8534,7 +9484,7 @@ function _malloc($0) {
        break L244;
       }
      }
-     $601 = HEAP32[(3428)>>2]|0;
+     $601 = HEAP32[(3460)>>2]|0;
      $602 = (($540) - ($$2253$ph$i))|0;
      $603 = (($602) + ($601))|0;
      $604 = (0 - ($601))|0;
@@ -8559,9 +9509,9 @@ function _malloc($0) {
      }
     }
    } while(0);
-   $611 = HEAP32[(3392)>>2]|0;
+   $611 = HEAP32[(3424)>>2]|0;
    $612 = $611 | 4;
-   HEAP32[(3392)>>2] = $612;
+   HEAP32[(3424)>>2] = $612;
    $$4236$i = $$2234253237$i;
    label = 178;
   } else {
@@ -8597,35 +9547,35 @@ function _malloc($0) {
   }
  }
  if ((label|0) == 180) {
-  $626 = HEAP32[(3380)>>2]|0;
+  $626 = HEAP32[(3412)>>2]|0;
   $627 = (($626) + ($$723948$i))|0;
-  HEAP32[(3380)>>2] = $627;
-  $628 = HEAP32[(3384)>>2]|0;
+  HEAP32[(3412)>>2] = $627;
+  $628 = HEAP32[(3416)>>2]|0;
   $629 = ($627>>>0)>($628>>>0);
   if ($629) {
-   HEAP32[(3384)>>2] = $627;
+   HEAP32[(3416)>>2] = $627;
   }
-  $630 = HEAP32[(2972)>>2]|0;
+  $630 = HEAP32[(3004)>>2]|0;
   $631 = ($630|0)==(0|0);
   do {
    if ($631) {
-    $632 = HEAP32[(2964)>>2]|0;
+    $632 = HEAP32[(2996)>>2]|0;
     $633 = ($632|0)==(0|0);
     $634 = ($$749$i>>>0)<($632>>>0);
     $or$cond12$i = $633 | $634;
     if ($or$cond12$i) {
-     HEAP32[(2964)>>2] = $$749$i;
+     HEAP32[(2996)>>2] = $$749$i;
     }
-    HEAP32[(3396)>>2] = $$749$i;
-    HEAP32[(3400)>>2] = $$723948$i;
-    HEAP32[(3408)>>2] = 0;
-    $635 = HEAP32[855]|0;
-    HEAP32[(2984)>>2] = $635;
-    HEAP32[(2980)>>2] = -1;
+    HEAP32[(3428)>>2] = $$749$i;
+    HEAP32[(3432)>>2] = $$723948$i;
+    HEAP32[(3440)>>2] = 0;
+    $635 = HEAP32[863]|0;
+    HEAP32[(3016)>>2] = $635;
+    HEAP32[(3012)>>2] = -1;
     $$01$i$i = 0;
     while(1) {
      $636 = $$01$i$i << 1;
-     $637 = (2988 + ($636<<2)|0);
+     $637 = (3020 + ($636<<2)|0);
      $638 = ((($637)) + 12|0);
      HEAP32[$638>>2] = $637;
      $639 = ((($637)) + 8|0);
@@ -8648,18 +9598,18 @@ function _malloc($0) {
     $648 = $645 ? 0 : $647;
     $649 = (($$749$i) + ($648)|0);
     $650 = (($641) - ($648))|0;
-    HEAP32[(2972)>>2] = $649;
-    HEAP32[(2960)>>2] = $650;
+    HEAP32[(3004)>>2] = $649;
+    HEAP32[(2992)>>2] = $650;
     $651 = $650 | 1;
     $652 = ((($649)) + 4|0);
     HEAP32[$652>>2] = $651;
     $653 = (($649) + ($650)|0);
     $654 = ((($653)) + 4|0);
     HEAP32[$654>>2] = 40;
-    $655 = HEAP32[(3436)>>2]|0;
-    HEAP32[(2976)>>2] = $655;
+    $655 = HEAP32[(3468)>>2]|0;
+    HEAP32[(3008)>>2] = $655;
    } else {
-    $$024371$i = (3396);
+    $$024371$i = (3428);
     while(1) {
      $656 = HEAP32[$$024371$i>>2]|0;
      $657 = ((($$024371$i)) + 4|0);
@@ -8691,7 +9641,7 @@ function _malloc($0) {
       if ($or$cond51$i) {
        $670 = (($658) + ($$723948$i))|0;
        HEAP32[$657>>2] = $670;
-       $671 = HEAP32[(2960)>>2]|0;
+       $671 = HEAP32[(2992)>>2]|0;
        $672 = ((($630)) + 8|0);
        $673 = $672;
        $674 = $673 & 7;
@@ -8702,30 +9652,30 @@ function _malloc($0) {
        $679 = (($630) + ($678)|0);
        $680 = (($$723948$i) - ($678))|0;
        $681 = (($671) + ($680))|0;
-       HEAP32[(2972)>>2] = $679;
-       HEAP32[(2960)>>2] = $681;
+       HEAP32[(3004)>>2] = $679;
+       HEAP32[(2992)>>2] = $681;
        $682 = $681 | 1;
        $683 = ((($679)) + 4|0);
        HEAP32[$683>>2] = $682;
        $684 = (($679) + ($681)|0);
        $685 = ((($684)) + 4|0);
        HEAP32[$685>>2] = 40;
-       $686 = HEAP32[(3436)>>2]|0;
-       HEAP32[(2976)>>2] = $686;
+       $686 = HEAP32[(3468)>>2]|0;
+       HEAP32[(3008)>>2] = $686;
        break;
       }
      }
     }
-    $687 = HEAP32[(2964)>>2]|0;
+    $687 = HEAP32[(2996)>>2]|0;
     $688 = ($$749$i>>>0)<($687>>>0);
     if ($688) {
-     HEAP32[(2964)>>2] = $$749$i;
+     HEAP32[(2996)>>2] = $$749$i;
      $752 = $$749$i;
     } else {
      $752 = $687;
     }
     $689 = (($$749$i) + ($$723948$i)|0);
-    $$124470$i = (3396);
+    $$124470$i = (3428);
     while(1) {
      $690 = HEAP32[$$124470$i>>2]|0;
      $691 = ($690|0)==($689|0);
@@ -8780,21 +9730,21 @@ function _malloc($0) {
       $725 = ($717|0)==($630|0);
       do {
        if ($725) {
-        $726 = HEAP32[(2960)>>2]|0;
+        $726 = HEAP32[(2992)>>2]|0;
         $727 = (($726) + ($722))|0;
-        HEAP32[(2960)>>2] = $727;
-        HEAP32[(2972)>>2] = $721;
+        HEAP32[(2992)>>2] = $727;
+        HEAP32[(3004)>>2] = $721;
         $728 = $727 | 1;
         $729 = ((($721)) + 4|0);
         HEAP32[$729>>2] = $728;
        } else {
-        $730 = HEAP32[(2968)>>2]|0;
+        $730 = HEAP32[(3000)>>2]|0;
         $731 = ($717|0)==($730|0);
         if ($731) {
-         $732 = HEAP32[(2956)>>2]|0;
+         $732 = HEAP32[(2988)>>2]|0;
          $733 = (($732) + ($722))|0;
-         HEAP32[(2956)>>2] = $733;
-         HEAP32[(2968)>>2] = $721;
+         HEAP32[(2988)>>2] = $733;
+         HEAP32[(3000)>>2] = $721;
          $734 = $733 | 1;
          $735 = ((($721)) + 4|0);
          HEAP32[$735>>2] = $734;
@@ -8817,7 +9767,7 @@ function _malloc($0) {
            $746 = ((($717)) + 12|0);
            $747 = HEAP32[$746>>2]|0;
            $748 = $742 << 1;
-           $749 = (2988 + ($748<<2)|0);
+           $749 = (3020 + ($748<<2)|0);
            $750 = ($745|0)==($749|0);
            do {
             if (!($750)) {
@@ -8840,9 +9790,9 @@ function _malloc($0) {
            if ($756) {
             $757 = 1 << $742;
             $758 = $757 ^ -1;
-            $759 = HEAP32[737]|0;
+            $759 = HEAP32[745]|0;
             $760 = $759 & $758;
-            HEAP32[737] = $760;
+            HEAP32[745] = $760;
             break;
            }
            $761 = ($747|0)==($749|0);
@@ -8955,7 +9905,7 @@ function _malloc($0) {
            }
            $795 = ((($717)) + 28|0);
            $796 = HEAP32[$795>>2]|0;
-           $797 = (3252 + ($796<<2)|0);
+           $797 = (3284 + ($796<<2)|0);
            $798 = HEAP32[$797>>2]|0;
            $799 = ($717|0)==($798|0);
            do {
@@ -8967,12 +9917,12 @@ function _malloc($0) {
              }
              $800 = 1 << $796;
              $801 = $800 ^ -1;
-             $802 = HEAP32[(2952)>>2]|0;
+             $802 = HEAP32[(2984)>>2]|0;
              $803 = $802 & $801;
-             HEAP32[(2952)>>2] = $803;
+             HEAP32[(2984)>>2] = $803;
              break L314;
             } else {
-             $804 = HEAP32[(2964)>>2]|0;
+             $804 = HEAP32[(2996)>>2]|0;
              $805 = ($768>>>0)<($804>>>0);
              if ($805) {
               _abort();
@@ -8993,7 +9943,7 @@ function _malloc($0) {
              }
             }
            } while(0);
-           $810 = HEAP32[(2964)>>2]|0;
+           $810 = HEAP32[(2996)>>2]|0;
            $811 = ($$3$i$i>>>0)<($810>>>0);
            if ($811) {
             _abort();
@@ -9025,7 +9975,7 @@ function _malloc($0) {
            if ($821) {
             break;
            }
-           $822 = HEAP32[(2964)>>2]|0;
+           $822 = HEAP32[(2996)>>2]|0;
            $823 = ($820>>>0)<($822>>>0);
            if ($823) {
             _abort();
@@ -9058,21 +10008,21 @@ function _malloc($0) {
         $835 = ($$0287$i$i>>>0)<(256);
         if ($835) {
          $836 = $834 << 1;
-         $837 = (2988 + ($836<<2)|0);
-         $838 = HEAP32[737]|0;
+         $837 = (3020 + ($836<<2)|0);
+         $838 = HEAP32[745]|0;
          $839 = 1 << $834;
          $840 = $838 & $839;
          $841 = ($840|0)==(0);
          do {
           if ($841) {
            $842 = $838 | $839;
-           HEAP32[737] = $842;
+           HEAP32[745] = $842;
            $$pre$i19$i = ((($837)) + 8|0);
            $$0295$i$i = $837;$$pre$phi$i20$iZ2D = $$pre$i19$i;
           } else {
            $843 = ((($837)) + 8|0);
            $844 = HEAP32[$843>>2]|0;
-           $845 = HEAP32[(2964)>>2]|0;
+           $845 = HEAP32[(2996)>>2]|0;
            $846 = ($844>>>0)<($845>>>0);
            if (!($846)) {
             $$0295$i$i = $844;$$pre$phi$i20$iZ2D = $843;
@@ -9127,20 +10077,20 @@ function _malloc($0) {
           $$0296$i$i = $874;
          }
         } while(0);
-        $875 = (3252 + ($$0296$i$i<<2)|0);
+        $875 = (3284 + ($$0296$i$i<<2)|0);
         $876 = ((($721)) + 28|0);
         HEAP32[$876>>2] = $$0296$i$i;
         $877 = ((($721)) + 16|0);
         $878 = ((($877)) + 4|0);
         HEAP32[$878>>2] = 0;
         HEAP32[$877>>2] = 0;
-        $879 = HEAP32[(2952)>>2]|0;
+        $879 = HEAP32[(2984)>>2]|0;
         $880 = 1 << $$0296$i$i;
         $881 = $879 & $880;
         $882 = ($881|0)==(0);
         if ($882) {
          $883 = $879 | $880;
-         HEAP32[(2952)>>2] = $883;
+         HEAP32[(2984)>>2] = $883;
          HEAP32[$875>>2] = $721;
          $884 = ((($721)) + 24|0);
          HEAP32[$884>>2] = $875;
@@ -9179,7 +10129,7 @@ function _malloc($0) {
          }
         }
         if ((label|0) == 262) {
-         $902 = HEAP32[(2964)>>2]|0;
+         $902 = HEAP32[(2996)>>2]|0;
          $903 = ($898>>>0)<($902>>>0);
          if ($903) {
           _abort();
@@ -9198,7 +10148,7 @@ function _malloc($0) {
         else if ((label|0) == 265) {
          $907 = ((($$0289$i$i)) + 8|0);
          $908 = HEAP32[$907>>2]|0;
-         $909 = HEAP32[(2964)>>2]|0;
+         $909 = HEAP32[(2996)>>2]|0;
          $910 = ($908>>>0)>=($909>>>0);
          $not$7$i$i = ($$0289$i$i>>>0)>=($909>>>0);
          $911 = $910 & $not$7$i$i;
@@ -9225,7 +10175,7 @@ function _malloc($0) {
       STACKTOP = sp;return ($$0|0);
      }
     }
-    $$0$i$i$i = (3396);
+    $$0$i$i$i = (3428);
     while(1) {
      $916 = HEAP32[$$0$i$i$i>>2]|0;
      $917 = ($916>>>0)>($630>>>0);
@@ -9266,23 +10216,23 @@ function _malloc($0) {
     $945 = $942 ? 0 : $944;
     $946 = (($$749$i) + ($945)|0);
     $947 = (($938) - ($945))|0;
-    HEAP32[(2972)>>2] = $946;
-    HEAP32[(2960)>>2] = $947;
+    HEAP32[(3004)>>2] = $946;
+    HEAP32[(2992)>>2] = $947;
     $948 = $947 | 1;
     $949 = ((($946)) + 4|0);
     HEAP32[$949>>2] = $948;
     $950 = (($946) + ($947)|0);
     $951 = ((($950)) + 4|0);
     HEAP32[$951>>2] = 40;
-    $952 = HEAP32[(3436)>>2]|0;
-    HEAP32[(2976)>>2] = $952;
+    $952 = HEAP32[(3468)>>2]|0;
+    HEAP32[(3008)>>2] = $952;
     $953 = ((($935)) + 4|0);
     HEAP32[$953>>2] = 27;
-    ;HEAP32[$936>>2]=HEAP32[(3396)>>2]|0;HEAP32[$936+4>>2]=HEAP32[(3396)+4>>2]|0;HEAP32[$936+8>>2]=HEAP32[(3396)+8>>2]|0;HEAP32[$936+12>>2]=HEAP32[(3396)+12>>2]|0;
-    HEAP32[(3396)>>2] = $$749$i;
-    HEAP32[(3400)>>2] = $$723948$i;
-    HEAP32[(3408)>>2] = 0;
-    HEAP32[(3404)>>2] = $936;
+    ;HEAP32[$936>>2]=HEAP32[(3428)>>2]|0;HEAP32[$936+4>>2]=HEAP32[(3428)+4>>2]|0;HEAP32[$936+8>>2]=HEAP32[(3428)+8>>2]|0;HEAP32[$936+12>>2]=HEAP32[(3428)+12>>2]|0;
+    HEAP32[(3428)>>2] = $$749$i;
+    HEAP32[(3432)>>2] = $$723948$i;
+    HEAP32[(3440)>>2] = 0;
+    HEAP32[(3436)>>2] = $936;
     $955 = $937;
     while(1) {
      $954 = ((($955)) + 4|0);
@@ -9311,20 +10261,20 @@ function _malloc($0) {
      $967 = ($961>>>0)<(256);
      if ($967) {
       $968 = $966 << 1;
-      $969 = (2988 + ($968<<2)|0);
-      $970 = HEAP32[737]|0;
+      $969 = (3020 + ($968<<2)|0);
+      $970 = HEAP32[745]|0;
       $971 = 1 << $966;
       $972 = $970 & $971;
       $973 = ($972|0)==(0);
       if ($973) {
        $974 = $970 | $971;
-       HEAP32[737] = $974;
+       HEAP32[745] = $974;
        $$pre$i$i = ((($969)) + 8|0);
        $$0211$i$i = $969;$$pre$phi$i$iZ2D = $$pre$i$i;
       } else {
        $975 = ((($969)) + 8|0);
        $976 = HEAP32[$975>>2]|0;
-       $977 = HEAP32[(2964)>>2]|0;
+       $977 = HEAP32[(2996)>>2]|0;
        $978 = ($976>>>0)<($977>>>0);
        if ($978) {
         _abort();
@@ -9376,19 +10326,19 @@ function _malloc($0) {
        $$0212$i$i = $1006;
       }
      }
-     $1007 = (3252 + ($$0212$i$i<<2)|0);
+     $1007 = (3284 + ($$0212$i$i<<2)|0);
      $1008 = ((($630)) + 28|0);
      HEAP32[$1008>>2] = $$0212$i$i;
      $1009 = ((($630)) + 20|0);
      HEAP32[$1009>>2] = 0;
      HEAP32[$933>>2] = 0;
-     $1010 = HEAP32[(2952)>>2]|0;
+     $1010 = HEAP32[(2984)>>2]|0;
      $1011 = 1 << $$0212$i$i;
      $1012 = $1010 & $1011;
      $1013 = ($1012|0)==(0);
      if ($1013) {
       $1014 = $1010 | $1011;
-      HEAP32[(2952)>>2] = $1014;
+      HEAP32[(2984)>>2] = $1014;
       HEAP32[$1007>>2] = $630;
       $1015 = ((($630)) + 24|0);
       HEAP32[$1015>>2] = $1007;
@@ -9427,7 +10377,7 @@ function _malloc($0) {
       }
      }
      if ((label|0) == 289) {
-      $1033 = HEAP32[(2964)>>2]|0;
+      $1033 = HEAP32[(2996)>>2]|0;
       $1034 = ($1029>>>0)<($1033>>>0);
       if ($1034) {
        _abort();
@@ -9446,7 +10396,7 @@ function _malloc($0) {
      else if ((label|0) == 292) {
       $1038 = ((($$0207$i$i)) + 8|0);
       $1039 = HEAP32[$1038>>2]|0;
-      $1040 = HEAP32[(2964)>>2]|0;
+      $1040 = HEAP32[(2996)>>2]|0;
       $1041 = ($1039>>>0)>=($1040>>>0);
       $not$$i$i = ($$0207$i$i>>>0)>=($1040>>>0);
       $1042 = $1041 & $not$$i$i;
@@ -9469,14 +10419,14 @@ function _malloc($0) {
     }
    }
   } while(0);
-  $1048 = HEAP32[(2960)>>2]|0;
+  $1048 = HEAP32[(2992)>>2]|0;
   $1049 = ($1048>>>0)>($$0197>>>0);
   if ($1049) {
    $1050 = (($1048) - ($$0197))|0;
-   HEAP32[(2960)>>2] = $1050;
-   $1051 = HEAP32[(2972)>>2]|0;
+   HEAP32[(2992)>>2] = $1050;
+   $1051 = HEAP32[(3004)>>2]|0;
    $1052 = (($1051) + ($$0197)|0);
-   HEAP32[(2972)>>2] = $1052;
+   HEAP32[(3004)>>2] = $1052;
    $1053 = $1050 | 1;
    $1054 = ((($1052)) + 4|0);
    HEAP32[$1054>>2] = $1053;
@@ -9519,7 +10469,7 @@ function _free($0) {
   return;
  }
  $2 = ((($0)) + -8|0);
- $3 = HEAP32[(2964)>>2]|0;
+ $3 = HEAP32[(2996)>>2]|0;
  $4 = ($2>>>0)<($3>>>0);
  if ($4) {
   _abort();
@@ -9552,7 +10502,7 @@ function _free($0) {
     _abort();
     // unreachable;
    }
-   $19 = HEAP32[(2968)>>2]|0;
+   $19 = HEAP32[(3000)>>2]|0;
    $20 = ($16|0)==($19|0);
    if ($20) {
     $104 = ((($10)) + 4|0);
@@ -9567,7 +10517,7 @@ function _free($0) {
     $109 = ((($16)) + 4|0);
     $110 = $17 | 1;
     $111 = $105 & -2;
-    HEAP32[(2956)>>2] = $17;
+    HEAP32[(2988)>>2] = $17;
     HEAP32[$104>>2] = $111;
     HEAP32[$109>>2] = $110;
     HEAP32[$108>>2] = $17;
@@ -9581,7 +10531,7 @@ function _free($0) {
     $25 = ((($16)) + 12|0);
     $26 = HEAP32[$25>>2]|0;
     $27 = $21 << 1;
-    $28 = (2988 + ($27<<2)|0);
+    $28 = (3020 + ($27<<2)|0);
     $29 = ($24|0)==($28|0);
     if (!($29)) {
      $30 = ($24>>>0)<($3>>>0);
@@ -9601,9 +10551,9 @@ function _free($0) {
     if ($34) {
      $35 = 1 << $21;
      $36 = $35 ^ -1;
-     $37 = HEAP32[737]|0;
+     $37 = HEAP32[745]|0;
      $38 = $37 & $36;
-     HEAP32[737] = $38;
+     HEAP32[745] = $38;
      $$1 = $16;$$1382 = $17;$113 = $16;
      break;
     }
@@ -9717,7 +10667,7 @@ function _free($0) {
    } else {
     $73 = ((($16)) + 28|0);
     $74 = HEAP32[$73>>2]|0;
-    $75 = (3252 + ($74<<2)|0);
+    $75 = (3284 + ($74<<2)|0);
     $76 = HEAP32[$75>>2]|0;
     $77 = ($16|0)==($76|0);
     do {
@@ -9727,14 +10677,14 @@ function _free($0) {
       if ($cond421) {
        $78 = 1 << $74;
        $79 = $78 ^ -1;
-       $80 = HEAP32[(2952)>>2]|0;
+       $80 = HEAP32[(2984)>>2]|0;
        $81 = $80 & $79;
-       HEAP32[(2952)>>2] = $81;
+       HEAP32[(2984)>>2] = $81;
        $$1 = $16;$$1382 = $17;$113 = $16;
        break L10;
       }
      } else {
-      $82 = HEAP32[(2964)>>2]|0;
+      $82 = HEAP32[(2996)>>2]|0;
       $83 = ($46>>>0)<($82>>>0);
       if ($83) {
        _abort();
@@ -9756,7 +10706,7 @@ function _free($0) {
       }
      }
     } while(0);
-    $88 = HEAP32[(2964)>>2]|0;
+    $88 = HEAP32[(2996)>>2]|0;
     $89 = ($$3>>>0)<($88>>>0);
     if ($89) {
      _abort();
@@ -9788,7 +10738,7 @@ function _free($0) {
     if ($99) {
      $$1 = $16;$$1382 = $17;$113 = $16;
     } else {
-     $100 = HEAP32[(2964)>>2]|0;
+     $100 = HEAP32[(2996)>>2]|0;
      $101 = ($98>>>0)<($100>>>0);
      if ($101) {
       _abort();
@@ -9823,14 +10773,14 @@ function _free($0) {
  $118 = $115 & 2;
  $119 = ($118|0)==(0);
  if ($119) {
-  $120 = HEAP32[(2972)>>2]|0;
+  $120 = HEAP32[(3004)>>2]|0;
   $121 = ($10|0)==($120|0);
-  $122 = HEAP32[(2968)>>2]|0;
+  $122 = HEAP32[(3000)>>2]|0;
   if ($121) {
-   $123 = HEAP32[(2960)>>2]|0;
+   $123 = HEAP32[(2992)>>2]|0;
    $124 = (($123) + ($$1382))|0;
-   HEAP32[(2960)>>2] = $124;
-   HEAP32[(2972)>>2] = $$1;
+   HEAP32[(2992)>>2] = $124;
+   HEAP32[(3004)>>2] = $$1;
    $125 = $124 | 1;
    $126 = ((($$1)) + 4|0);
    HEAP32[$126>>2] = $125;
@@ -9838,16 +10788,16 @@ function _free($0) {
    if (!($127)) {
     return;
    }
-   HEAP32[(2968)>>2] = 0;
-   HEAP32[(2956)>>2] = 0;
+   HEAP32[(3000)>>2] = 0;
+   HEAP32[(2988)>>2] = 0;
    return;
   }
   $128 = ($10|0)==($122|0);
   if ($128) {
-   $129 = HEAP32[(2956)>>2]|0;
+   $129 = HEAP32[(2988)>>2]|0;
    $130 = (($129) + ($$1382))|0;
-   HEAP32[(2956)>>2] = $130;
-   HEAP32[(2968)>>2] = $113;
+   HEAP32[(2988)>>2] = $130;
+   HEAP32[(3000)>>2] = $113;
    $131 = $130 | 1;
    $132 = ((($$1)) + 4|0);
    HEAP32[$132>>2] = $131;
@@ -9866,10 +10816,10 @@ function _free($0) {
     $140 = ((($10)) + 12|0);
     $141 = HEAP32[$140>>2]|0;
     $142 = $136 << 1;
-    $143 = (2988 + ($142<<2)|0);
+    $143 = (3020 + ($142<<2)|0);
     $144 = ($139|0)==($143|0);
     if (!($144)) {
-     $145 = HEAP32[(2964)>>2]|0;
+     $145 = HEAP32[(2996)>>2]|0;
      $146 = ($139>>>0)<($145>>>0);
      if ($146) {
       _abort();
@@ -9887,9 +10837,9 @@ function _free($0) {
     if ($150) {
      $151 = 1 << $136;
      $152 = $151 ^ -1;
-     $153 = HEAP32[737]|0;
+     $153 = HEAP32[745]|0;
      $154 = $153 & $152;
-     HEAP32[737] = $154;
+     HEAP32[745] = $154;
      break;
     }
     $155 = ($141|0)==($143|0);
@@ -9897,7 +10847,7 @@ function _free($0) {
      $$pre442 = ((($141)) + 8|0);
      $$pre$phi443Z2D = $$pre442;
     } else {
-     $156 = HEAP32[(2964)>>2]|0;
+     $156 = HEAP32[(2996)>>2]|0;
      $157 = ($141>>>0)<($156>>>0);
      if ($157) {
       _abort();
@@ -9957,7 +10907,7 @@ function _free($0) {
         $$1398 = $187;$$1402 = $186;
        }
       }
-      $189 = HEAP32[(2964)>>2]|0;
+      $189 = HEAP32[(2996)>>2]|0;
       $190 = ($$1402>>>0)<($189>>>0);
       if ($190) {
        _abort();
@@ -9970,7 +10920,7 @@ function _free($0) {
      } else {
       $167 = ((($10)) + 8|0);
       $168 = HEAP32[$167>>2]|0;
-      $169 = HEAP32[(2964)>>2]|0;
+      $169 = HEAP32[(2996)>>2]|0;
       $170 = ($168>>>0)<($169>>>0);
       if ($170) {
        _abort();
@@ -10001,7 +10951,7 @@ function _free($0) {
     if (!($191)) {
      $192 = ((($10)) + 28|0);
      $193 = HEAP32[$192>>2]|0;
-     $194 = (3252 + ($193<<2)|0);
+     $194 = (3284 + ($193<<2)|0);
      $195 = HEAP32[$194>>2]|0;
      $196 = ($10|0)==($195|0);
      do {
@@ -10011,13 +10961,13 @@ function _free($0) {
        if ($cond422) {
         $197 = 1 << $193;
         $198 = $197 ^ -1;
-        $199 = HEAP32[(2952)>>2]|0;
+        $199 = HEAP32[(2984)>>2]|0;
         $200 = $199 & $198;
-        HEAP32[(2952)>>2] = $200;
+        HEAP32[(2984)>>2] = $200;
         break L108;
        }
       } else {
-       $201 = HEAP32[(2964)>>2]|0;
+       $201 = HEAP32[(2996)>>2]|0;
        $202 = ($163>>>0)<($201>>>0);
        if ($202) {
         _abort();
@@ -10038,7 +10988,7 @@ function _free($0) {
        }
       }
      } while(0);
-     $207 = HEAP32[(2964)>>2]|0;
+     $207 = HEAP32[(2996)>>2]|0;
      $208 = ($$3400>>>0)<($207>>>0);
      if ($208) {
       _abort();
@@ -10068,7 +11018,7 @@ function _free($0) {
      $217 = HEAP32[$216>>2]|0;
      $218 = ($217|0)==(0|0);
      if (!($218)) {
-      $219 = HEAP32[(2964)>>2]|0;
+      $219 = HEAP32[(2996)>>2]|0;
       $220 = ($217>>>0)<($219>>>0);
       if ($220) {
        _abort();
@@ -10089,10 +11039,10 @@ function _free($0) {
   HEAP32[$224>>2] = $223;
   $225 = (($113) + ($135)|0);
   HEAP32[$225>>2] = $135;
-  $226 = HEAP32[(2968)>>2]|0;
+  $226 = HEAP32[(3000)>>2]|0;
   $227 = ($$1|0)==($226|0);
   if ($227) {
-   HEAP32[(2956)>>2] = $135;
+   HEAP32[(2988)>>2] = $135;
    return;
   } else {
    $$2 = $135;
@@ -10111,20 +11061,20 @@ function _free($0) {
  $233 = ($$2>>>0)<(256);
  if ($233) {
   $234 = $232 << 1;
-  $235 = (2988 + ($234<<2)|0);
-  $236 = HEAP32[737]|0;
+  $235 = (3020 + ($234<<2)|0);
+  $236 = HEAP32[745]|0;
   $237 = 1 << $232;
   $238 = $236 & $237;
   $239 = ($238|0)==(0);
   if ($239) {
    $240 = $236 | $237;
-   HEAP32[737] = $240;
+   HEAP32[745] = $240;
    $$pre = ((($235)) + 8|0);
    $$0403 = $235;$$pre$phiZ2D = $$pre;
   } else {
    $241 = ((($235)) + 8|0);
    $242 = HEAP32[$241>>2]|0;
-   $243 = HEAP32[(2964)>>2]|0;
+   $243 = HEAP32[(2996)>>2]|0;
    $244 = ($242>>>0)<($243>>>0);
    if ($244) {
     _abort();
@@ -10176,21 +11126,21 @@ function _free($0) {
    $$0396 = $272;
   }
  }
- $273 = (3252 + ($$0396<<2)|0);
+ $273 = (3284 + ($$0396<<2)|0);
  $274 = ((($$1)) + 28|0);
  HEAP32[$274>>2] = $$0396;
  $275 = ((($$1)) + 16|0);
  $276 = ((($$1)) + 20|0);
  HEAP32[$276>>2] = 0;
  HEAP32[$275>>2] = 0;
- $277 = HEAP32[(2952)>>2]|0;
+ $277 = HEAP32[(2984)>>2]|0;
  $278 = 1 << $$0396;
  $279 = $277 & $278;
  $280 = ($279|0)==(0);
  do {
   if ($280) {
    $281 = $277 | $278;
-   HEAP32[(2952)>>2] = $281;
+   HEAP32[(2984)>>2] = $281;
    HEAP32[$273>>2] = $$1;
    $282 = ((($$1)) + 24|0);
    HEAP32[$282>>2] = $273;
@@ -10228,7 +11178,7 @@ function _free($0) {
     }
    }
    if ((label|0) == 121) {
-    $300 = HEAP32[(2964)>>2]|0;
+    $300 = HEAP32[(2996)>>2]|0;
     $301 = ($296>>>0)<($300>>>0);
     if ($301) {
      _abort();
@@ -10247,7 +11197,7 @@ function _free($0) {
    else if ((label|0) == 124) {
     $305 = ((($$0384)) + 8|0);
     $306 = HEAP32[$305>>2]|0;
-    $307 = HEAP32[(2964)>>2]|0;
+    $307 = HEAP32[(2996)>>2]|0;
     $308 = ($306>>>0)>=($307>>>0);
     $not$437 = ($$0384>>>0)>=($307>>>0);
     $309 = $308 & $not$437;
@@ -10269,12 +11219,12 @@ function _free($0) {
    }
   }
  } while(0);
- $314 = HEAP32[(2980)>>2]|0;
+ $314 = HEAP32[(3012)>>2]|0;
  $315 = (($314) + -1)|0;
- HEAP32[(2980)>>2] = $315;
+ HEAP32[(3012)>>2] = $315;
  $316 = ($315|0)==(0);
  if ($316) {
-  $$0212$in$i = (3404);
+  $$0212$in$i = (3436);
  } else {
   return;
  }
@@ -10288,7 +11238,7 @@ function _free($0) {
    $$0212$in$i = $318;
   }
  }
- HEAP32[(2980)>>2] = -1;
+ HEAP32[(3012)>>2] = -1;
  return;
 }
 function runPostSets() {
@@ -10760,8 +11710,8 @@ function b2() {
 
 // EMSCRIPTEN_END_FUNCS
 var FUNCTION_TABLE_ii = [b0,___stdio_close];
-var FUNCTION_TABLE_iiii = [b1,b1,___stdout_write,___stdio_seek,b1,___stdio_write,b1,b1];
-var FUNCTION_TABLE_v = [b2,b2,b2,b2,_render,b2,b2,b2];
+var FUNCTION_TABLE_iiii = [b1,b1,___stdout_write,___stdio_seek,_on_pointerlockchange,b1,___stdio_write,b1];
+var FUNCTION_TABLE_v = [b2,b2,b2,b2,b2,_render,b2,b2];
 
   return { _sbrk: _sbrk, _i64Subtract: _i64Subtract, _free: _free, _main: _main, _i64Add: _i64Add, _memset: _memset, _llvm_cttz_i32: _llvm_cttz_i32, _malloc: _malloc, _emscripten_get_global_libc: _emscripten_get_global_libc, _memcpy: _memcpy, _llvm_bswap_i32: _llvm_bswap_i32, _bitshift64Shl: _bitshift64Shl, _bitshift64Lshr: _bitshift64Lshr, _fflush: _fflush, ___udivdi3: ___udivdi3, ___uremdi3: ___uremdi3, ___errno_location: ___errno_location, ___udivmoddi4: ___udivmoddi4, runPostSets: runPostSets, stackAlloc: stackAlloc, stackSave: stackSave, stackRestore: stackRestore, establishStackSpace: establishStackSpace, setTempRet0: setTempRet0, getTempRet0: getTempRet0, setThrew: setThrew, stackAlloc: stackAlloc, stackSave: stackSave, stackRestore: stackRestore, establishStackSpace: establishStackSpace, setThrew: setThrew, setTempRet0: setTempRet0, getTempRet0: getTempRet0, dynCall_ii: dynCall_ii, dynCall_iiii: dynCall_iiii, dynCall_v: dynCall_v };
 })
