@@ -1,6 +1,8 @@
 // 
 /*/
  emcc -s USE_GLFW=3 test_glfw_char_callback.c -o test_glfw_char_callback.html
+
+ clang test_glfw_char_callback.c -I ../deps/glfw/include/ ../deps/glfw/build/src/libglfw3.a -framework Cocoa -framework CoreGraphics -framework IOKit -framework OpenGL -framework CoreVideo
  */
 #include <stdio.h>
 #include <GLFW/glfw3.h>
@@ -31,7 +33,7 @@ void on_char(GLFWwindow* window, unsigned int u) {
     // Cmd-B gives us U+0062 'b' (on Firefox 53.0b9, but not Chrome)
     // Cmd-` gives us '`' (on Safari TP 27, but not Firefox or Chrome)
     // etc
-    // Expected: should not even be called in those cases (Cmd pressed)
+    // Expected: should not even be called in those cases (Cmd pressed), like in native
     printf("on_char codepoint=U+%.4X '%c'\n", u, u);
 }
 
@@ -51,7 +53,9 @@ int main() {
 #ifdef __EMSCRIPTEN__
     emscripten_set_main_loop(render, 0, 1);
 #else
-    // TODO
+    while (!glfwWindowShouldClose(window)) {
+        glfwPollEvents();
+    }
 #endif
 
     glfwTerminate();
