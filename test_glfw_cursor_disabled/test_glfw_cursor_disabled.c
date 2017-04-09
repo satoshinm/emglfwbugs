@@ -1,3 +1,4 @@
+// https://github.com/kripken/emscripten/issues/5120 GLFW_CURSOR_DISABLED from glfwGetInputMode does not reflect Pointer Lock API state (sync glfw cursor to Pointer Lock status)
 /*/
  emcc -s USE_GLFW=3 test_glfw_cursor_disabled.c -o test_glfw_cursor_disabled.html
  */
