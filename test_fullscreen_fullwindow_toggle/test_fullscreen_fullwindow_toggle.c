@@ -136,10 +136,17 @@ void on_key(GLFWwindow *window, int key, int scancode, int action, int mods) {
         if (!fsce.isFullscreen) {
             emscripten_exit_soft_fullscreen();
 
+            // Workaround https://github.com/kripken/emscripten/issues/5124#issuecomment-292849872
+            // Force JSEvents.canPerformEventHandlerRequests() in library_html5.js to be true
+            // For some reason it is not set even though we are in an event handler and it works
+            EM_ASM(JSEvents.inEventHandler = true);
+            EM_ASM(JSEvents.currentEventHandler = {allowsDeferredCalls:true});
+
             // Enter fullscreen
             /* this returns 1=EMSCRIPTEN_RESULT_DEFERRED if EM_TRUE is given to defer
              * or -2=EMSCRIPTEN_RESULT_FAILED_NOT_DEFERRED if EM_FALSE
              * but the EM_ASM() JS works immediately?
+             */
             EmscriptenFullscreenStrategy strategy = {
                 .scaleMode = EMSCRIPTEN_FULLSCREEN_SCALE_STRETCH,
                 .canvasResolutionScaleMode = EMSCRIPTEN_FULLSCREEN_CANVAS_SCALE_STDDEF,
@@ -149,8 +156,7 @@ void on_key(GLFWwindow *window, int key, int scancode, int action, int mods) {
             };
             EMSCRIPTEN_RESULT ret = emscripten_request_fullscreen_strategy(NULL, EM_FALSE, &strategy);
             printf("emscripten_request_fullscreen_strategy = %d\n", ret);
-            */
-            EM_ASM(Module.requestFullscreen(1, 1));
+            //EM_ASM(Module.requestFullscreen(1, 1));
         } else {
             printf("Exiting fullscreen...\n");
             emscripten_exit_fullscreen();
