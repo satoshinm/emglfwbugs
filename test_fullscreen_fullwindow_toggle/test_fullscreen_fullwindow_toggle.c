@@ -64,6 +64,7 @@ void windowSizeCallback(GLFWwindow* window, int width, int height) {
   if (isInFullscreen && !wasFullscreen) {
     printf("Successfully transitioned to fullscreen mode!\n");
     wasFullscreen = isInFullscreen;
+    EM_ASM("Browser.setCanvasSize(screen.width, screen.height)");
   }
 
   if (wasFullscreen && !isInFullscreen) {
