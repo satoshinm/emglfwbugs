@@ -50,6 +50,8 @@ void windowSizeCallback(GLFWwindow* window, int width, int height) {
   }
 }
 
+#ifdef __EMSCRIPTEN__
+
 // Emscripten's "soft fullscreen" = maximizes the canvas in the browser client area, wanted to toggle soft/hard fullscreen
 void maximize_canvas() {
     EmscriptenFullscreenStrategy strategy = {
@@ -62,6 +64,20 @@ void maximize_canvas() {
 
     EMSCRIPTEN_RESULT ret = emscripten_enter_soft_fullscreen("#canvas", &strategy);
 }
+
+EM_BOOL fullscreen_change_callback(int eventType, const EmscriptenFullscreenChangeEvent *event, void *userData) {
+    printf("fullscreen_change_callback, isFullscreen=%d\n", event->isFullscreen);
+
+    if (!event->isFullscreen) {
+        // Go back to windowed mode with full-sized <canvas>, when user escapes out (instead of F11)
+        maximize_canvas();
+    }
+
+    return EM_TRUE;
+}
+
+
+#endif
 
 
 void on_key(GLFWwindow *window, int key, int scancode, int action, int mods) {
@@ -122,6 +138,7 @@ int main() {
 
 #ifdef __EMSCRIPTEN__
     maximize_canvas();
+    emscripten_set_fullscreenchange_callback(NULL, NULL, EM_TRUE, fullscreen_change_callback);
     emscripten_set_main_loop(render, 0, 1);
 #else
     while (!glfwWindowShouldClose(window)) {
