@@ -15,8 +15,14 @@
 GLFWwindow *window;
 
 void render() {
+    int w, h;
+    glfwGetFramebufferSize(window, &w, &h);
+    glViewport(0, 0, w, h);
+    glEnable(GL_SCISSOR_TEST);
+    glScissor(0, 0, w, h); // scissor to viewport, so not whole screen
     glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
+    glDisable(GL_SCISSOR_TEST);
 }
 
 #ifdef __EMSCRIPTEN__

@@ -1882,6 +1882,8 @@ function copyTempDouble(ptr) {
         }
       }};function _glClearColor(x0, x1, x2, x3) { GLctx['clearColor'](x0, x1, x2, x3) }
 
+  function _glDisable(x0) { GLctx['disable'](x0) }
+
   
   
   function _emscripten_get_now() { abort() }
@@ -3260,11 +3262,7 @@ function copyTempDouble(ptr) {
           0x00020018:0x00022008, // GLFW_OPENGL_PROFILE
         };
         return table[param];
-      }};function _glfwSetWindowSize(winid, width, height) {
-      GLFW.setWindowSize(winid, width, height);
-    }
-
-  function _glfwGetWindowSize(winid, width, height) {
+      }};function _glfwGetWindowSize(winid, width, height) {
       GLFW.getWindowSize(winid, width, height);
     }
 
@@ -3274,7 +3272,53 @@ function copyTempDouble(ptr) {
    
   Module["_bitshift64Shl"] = _bitshift64Shl;
 
+  function _glfwGetVideoModes(monitor, count) {
+      setValue(count, 0, 'i32');
+      return 0;
+    }
+
+  function _abort() {
+      Module['abort']();
+    }
+
+  function _glfwInit() {
+      if (GLFW.windows) return 1; // GL_TRUE
   
+      GLFW.initialTime = GLFW.getTime();
+      GLFW.hints = GLFW.defaultHints;
+      GLFW.windows = new Array()
+      GLFW.active = null;
+  
+      window.addEventListener("keydown", GLFW.onKeydown, true);
+      window.addEventListener("keypress", GLFW.onKeyPress, true);
+      window.addEventListener("keyup", GLFW.onKeyup, true);
+      Module["canvas"].addEventListener("mousemove", GLFW.onMousemove, true);
+      Module["canvas"].addEventListener("mousedown", GLFW.onMouseButtonDown, true);
+      Module["canvas"].addEventListener("mouseup", GLFW.onMouseButtonUp, true);
+      Module["canvas"].addEventListener('wheel', GLFW.onMouseWheel, true);
+      Module["canvas"].addEventListener('mousewheel', GLFW.onMouseWheel, true);
+      Module["canvas"].addEventListener('mouseenter', GLFW.onMouseenter, true);
+      Module["canvas"].addEventListener('mouseleave', GLFW.onMouseleave, true);
+  
+      Browser.resizeListeners.push(function(width, height) {
+         GLFW.onCanvasResize(width, height);
+      });
+      return 1; // GL_TRUE
+    }
+
+  function _glfwMakeContextCurrent(winid) {}
+
+  function ___lock() {}
+
+  function ___unlock() {}
+
+  var _emscripten_asm_const=true;
+
+  function _glEnable(x0) { GLctx['enable'](x0) }
+
+   
+  Module["_i64Add"] = _i64Add;
+
   
   
   var JSEvents={keyEvent:0,mouseEvent:0,wheelEvent:0,uiEvent:0,focusEvent:0,deviceOrientationEvent:0,deviceMotionEvent:0,fullscreenChangeEvent:0,pointerlockChangeEvent:0,visibilityChangeEvent:0,touchEvent:0,lastGamepadState:null,lastGamepadStateFrame:null,numGamepadsConnected:0,previousFullscreenElement:null,previousScreenX:null,previousScreenY:null,removeEventListenersRegistered:false,staticInit:function () {
@@ -4189,7 +4233,62 @@ function copyTempDouble(ptr) {
           useCapture: useCapture
         };
         JSEvents.registerOrRemoveHandler(eventHandler);
-      }};function __setLetterbox(element, topBottom, leftRight) {
+      }};var __restoreOldWindowedStyle=null;function _emscripten_exit_soft_fullscreen() {
+      if (__restoreOldWindowedStyle) __restoreOldWindowedStyle();
+      __restoreOldWindowedStyle = null;
+  
+      return 0;
+    }
+
+  function _glClear(x0) { GLctx['clear'](x0) }
+
+  var _emscripten_asm_const_int=true;
+
+  
+  var SYSCALLS={varargs:0,get:function (varargs) {
+        SYSCALLS.varargs += 4;
+        var ret = HEAP32[(((SYSCALLS.varargs)-(4))>>2)];
+        return ret;
+      },getStr:function () {
+        var ret = Pointer_stringify(SYSCALLS.get());
+        return ret;
+      },get64:function () {
+        var low = SYSCALLS.get(), high = SYSCALLS.get();
+        if (low >= 0) assert(high === 0);
+        else assert(high === -1);
+        return low;
+      },getZero:function () {
+        assert(SYSCALLS.get() === 0);
+      }};function ___syscall54(which, varargs) {SYSCALLS.varargs = varargs;
+  try {
+   // ioctl
+      return 0;
+    } catch (e) {
+    if (typeof FS === 'undefined' || !(e instanceof FS.ErrnoError)) abort(e);
+    return -e.errno;
+  }
+  }
+
+  function _glfwGetPrimaryMonitor() {
+      return 1;
+    }
+
+   
+  Module["_bitshift64Lshr"] = _bitshift64Lshr;
+
+  function _glfwCreateWindow(width, height, title, monitor, share) {
+      return GLFW.createWindow(width, height, title, monitor, share);
+    }
+
+  function _glViewport(x0, x1, x2, x3) { GLctx['viewport'](x0, x1, x2, x3) }
+
+
+  function _glfwSetWindowSizeCallback(winid, cbfun) {
+      GLFW.setWindowSizeCallback(winid, cbfun);
+    }
+
+  
+  function __setLetterbox(element, topBottom, leftRight) {
       if (JSEvents.isInternetExplorer()) {
         // Cannot use padding on IE11, because IE11 computes padding in addition to the size, unlike
         // other browsers, which treat padding to be part of the size.
@@ -4204,33 +4303,25 @@ function copyTempDouble(ptr) {
         element.style.paddingLeft = element.style.paddingRight = leftRight + 'px';
         element.style.paddingTop = element.style.paddingBottom = topBottom + 'px';
       }
-    }function _emscripten_do_request_fullscreen(target, strategy) {
-      if (typeof JSEvents.fullscreenEnabled() === 'undefined') return -1;
-      if (!JSEvents.fullscreenEnabled()) return -3;
-      if (!target) target = '#canvas';
-      target = JSEvents.findEventTarget(target);
-      if (!target) return -4;
-  
-      if (!target.requestFullscreen && !target.msRequestFullscreen && !target.mozRequestFullScreen && !target.mozRequestFullscreen && !target.webkitRequestFullscreen) {
-        return -3;
-      }
-  
-      var canPerformRequests = JSEvents.canPerformEventHandlerRequests();
-  
-      // Queue this function call if we're not currently in an event handler and the user saw it appropriate to do so.
-      if (!canPerformRequests) {
-        if (strategy.deferUntilInEventHandler) {
-          JSEvents.deferCall(JSEvents.requestFullscreen, 1 /* priority over pointer lock */, [target, strategy]);
-          return 1;
-        } else {
-          return -2;
-        }
-      }
-  
-      return JSEvents.requestFullscreen(target, strategy);
     }
   
-  var __currentFullscreenStrategy={};
+  function __hideEverythingExceptGivenElement(onlyVisibleElement) {
+      var child = onlyVisibleElement;
+      var parent = child.parentNode;
+      var hiddenElements = [];
+      while (child != document.body) {
+        var children = parent.children;
+        for (var i = 0; i < children.length; ++i) {
+          if (children[i] != child) {
+            hiddenElements.push({ node: children[i], displayState: children[i].style.display });
+            children[i].style.display = 'none';
+          }
+        }
+        child = parent;
+        parent = parent.parentNode;
+      }
+      return hiddenElements;
+    }
   
   function __registerRestoreOldStyle(canvas) {
       var oldWidth = canvas.width;
@@ -4295,129 +4386,6 @@ function copyTempDouble(ptr) {
       document.addEventListener('webkitfullscreenchange', restoreOldStyle);
       document.addEventListener('MSFullscreenChange', restoreOldStyle);
       return restoreOldStyle;
-    }function _emscripten_request_fullscreen_strategy(target, deferUntilInEventHandler, fullscreenStrategy) {
-      var strategy = {};
-      strategy.scaleMode = HEAP32[((fullscreenStrategy)>>2)];
-      strategy.canvasResolutionScaleMode = HEAP32[(((fullscreenStrategy)+(4))>>2)];
-      strategy.filteringMode = HEAP32[(((fullscreenStrategy)+(8))>>2)];
-      strategy.deferUntilInEventHandler = deferUntilInEventHandler;
-      strategy.canvasResizedCallback = HEAP32[(((fullscreenStrategy)+(12))>>2)];
-      strategy.canvasResizedCallbackUserData = HEAP32[(((fullscreenStrategy)+(16))>>2)];
-      __currentFullscreenStrategy = strategy;
-  
-      return _emscripten_do_request_fullscreen(target, strategy);
-    }
-
-  function _abort() {
-      Module['abort']();
-    }
-
-  function _glfwInit() {
-      if (GLFW.windows) return 1; // GL_TRUE
-  
-      GLFW.initialTime = GLFW.getTime();
-      GLFW.hints = GLFW.defaultHints;
-      GLFW.windows = new Array()
-      GLFW.active = null;
-  
-      window.addEventListener("keydown", GLFW.onKeydown, true);
-      window.addEventListener("keypress", GLFW.onKeyPress, true);
-      window.addEventListener("keyup", GLFW.onKeyup, true);
-      Module["canvas"].addEventListener("mousemove", GLFW.onMousemove, true);
-      Module["canvas"].addEventListener("mousedown", GLFW.onMouseButtonDown, true);
-      Module["canvas"].addEventListener("mouseup", GLFW.onMouseButtonUp, true);
-      Module["canvas"].addEventListener('wheel', GLFW.onMouseWheel, true);
-      Module["canvas"].addEventListener('mousewheel', GLFW.onMouseWheel, true);
-      Module["canvas"].addEventListener('mouseenter', GLFW.onMouseenter, true);
-      Module["canvas"].addEventListener('mouseleave', GLFW.onMouseleave, true);
-  
-      Browser.resizeListeners.push(function(width, height) {
-         GLFW.onCanvasResize(width, height);
-      });
-      return 1; // GL_TRUE
-    }
-
-  function _glfwMakeContextCurrent(winid) {}
-
-  function ___lock() {}
-
-  function ___unlock() {}
-
-  var _emscripten_asm_const=true;
-
-   
-  Module["_i64Add"] = _i64Add;
-
-  
-  var __restoreOldWindowedStyle=null;function _emscripten_exit_soft_fullscreen() {
-      if (__restoreOldWindowedStyle) __restoreOldWindowedStyle();
-      __restoreOldWindowedStyle = null;
-  
-      return 0;
-    }
-
-  function _glClear(x0) { GLctx['clear'](x0) }
-
-  var _emscripten_asm_const_int=true;
-
-  
-  var SYSCALLS={varargs:0,get:function (varargs) {
-        SYSCALLS.varargs += 4;
-        var ret = HEAP32[(((SYSCALLS.varargs)-(4))>>2)];
-        return ret;
-      },getStr:function () {
-        var ret = Pointer_stringify(SYSCALLS.get());
-        return ret;
-      },get64:function () {
-        var low = SYSCALLS.get(), high = SYSCALLS.get();
-        if (low >= 0) assert(high === 0);
-        else assert(high === -1);
-        return low;
-      },getZero:function () {
-        assert(SYSCALLS.get() === 0);
-      }};function ___syscall54(which, varargs) {SYSCALLS.varargs = varargs;
-  try {
-   // ioctl
-      return 0;
-    } catch (e) {
-    if (typeof FS === 'undefined' || !(e instanceof FS.ErrnoError)) abort(e);
-    return -e.errno;
-  }
-  }
-
-  function _glfwGetPrimaryMonitor() {
-      return 1;
-    }
-
-   
-  Module["_bitshift64Lshr"] = _bitshift64Lshr;
-
-  function _glfwCreateWindow(width, height, title, monitor, share) {
-      return GLFW.createWindow(width, height, title, monitor, share);
-    }
-
-
-  function _glfwSetWindowSizeCallback(winid, cbfun) {
-      GLFW.setWindowSizeCallback(winid, cbfun);
-    }
-
-  
-  function __hideEverythingExceptGivenElement(onlyVisibleElement) {
-      var child = onlyVisibleElement;
-      var parent = child.parentNode;
-      var hiddenElements = [];
-      while (child != document.body) {
-        var children = parent.children;
-        for (var i = 0; i < children.length; ++i) {
-          if (children[i] != child) {
-            hiddenElements.push({ node: children[i], displayState: children[i].style.display });
-            children[i].style.display = 'none';
-          }
-        }
-        child = parent;
-        parent = parent.parentNode;
-      }
-      return hiddenElements;
     }
   
   function __restoreHiddenElements(hiddenElements) {
@@ -4425,6 +4393,8 @@ function copyTempDouble(ptr) {
         hiddenElements[i].node.style.display = hiddenElements[i].displayState;
       }
     }
+  
+  var __currentFullscreenStrategy={};
   
   function __softFullscreenResizeWebGLRenderTarget() {
       var inHiDPIFullscreenMode = __currentFullscreenStrategy.canvasResolutionScaleMode == 2;
@@ -4519,27 +4489,17 @@ function copyTempDouble(ptr) {
       return 0;
     }
 
-  function _emscripten_exit_fullscreen() {
+  function _emscripten_set_fullscreenchange_callback(target, userData, useCapture, callbackfunc) {
       if (typeof JSEvents.fullscreenEnabled() === 'undefined') return -1;
-      // Make sure no queued up calls will fire after this.
-      JSEvents.removeDeferredCalls(JSEvents.requestFullscreen);
-  
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if (document.msExitFullscreen) {
-        document.msExitFullscreen();
-      } else if (document.mozCancelFullScreen) {
-        document.mozCancelFullScreen();
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      } else {
-        return -1;
+      if (!target) target = document;
+      else {
+        target = JSEvents.findEventTarget(target);
+        if (!target) return -4;
       }
-  
-      if (__currentFullscreenStrategy.canvasResizedCallback) {
-        Module['dynCall_iiii'](__currentFullscreenStrategy.canvasResizedCallback, 37, 0, __currentFullscreenStrategy.canvasResizedCallbackUserData);
-      }
-  
+      JSEvents.registerFullscreenChangeEventCallback(target, userData, useCapture, callbackfunc, 19, "fullscreenchange");
+      JSEvents.registerFullscreenChangeEventCallback(target, userData, useCapture, callbackfunc, 19, "mozfullscreenchange");
+      JSEvents.registerFullscreenChangeEventCallback(target, userData, useCapture, callbackfunc, 19, "webkitfullscreenchange");
+      JSEvents.registerFullscreenChangeEventCallback(target, userData, useCapture, callbackfunc, 19, "msfullscreenchange");
       return 0;
     }
 
@@ -4645,17 +4605,27 @@ function copyTempDouble(ptr) {
     } 
   Module["_sbrk"] = _sbrk;
 
-  function _emscripten_set_fullscreenchange_callback(target, userData, useCapture, callbackfunc) {
+  function _emscripten_exit_fullscreen() {
       if (typeof JSEvents.fullscreenEnabled() === 'undefined') return -1;
-      if (!target) target = document;
-      else {
-        target = JSEvents.findEventTarget(target);
-        if (!target) return -4;
+      // Make sure no queued up calls will fire after this.
+      JSEvents.removeDeferredCalls(JSEvents.requestFullscreen);
+  
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else {
+        return -1;
       }
-      JSEvents.registerFullscreenChangeEventCallback(target, userData, useCapture, callbackfunc, 19, "fullscreenchange");
-      JSEvents.registerFullscreenChangeEventCallback(target, userData, useCapture, callbackfunc, 19, "mozfullscreenchange");
-      JSEvents.registerFullscreenChangeEventCallback(target, userData, useCapture, callbackfunc, 19, "webkitfullscreenchange");
-      JSEvents.registerFullscreenChangeEventCallback(target, userData, useCapture, callbackfunc, 19, "msfullscreenchange");
+  
+      if (__currentFullscreenStrategy.canvasResizedCallback) {
+        Module['dynCall_iiii'](__currentFullscreenStrategy.canvasResizedCallback, 37, 0, __currentFullscreenStrategy.canvasResizedCallbackUserData);
+      }
+  
       return 0;
     }
 
@@ -4663,13 +4633,48 @@ function copyTempDouble(ptr) {
       GLFW.setKeyCallback(winid, cbfun);
     }
 
-  function _glfwGetVideoModes(monitor, count) {
-      setValue(count, 0, 'i32');
-      return 0;
+  
+  function _emscripten_do_request_fullscreen(target, strategy) {
+      if (typeof JSEvents.fullscreenEnabled() === 'undefined') return -1;
+      if (!JSEvents.fullscreenEnabled()) return -3;
+      if (!target) target = '#canvas';
+      target = JSEvents.findEventTarget(target);
+      if (!target) return -4;
+  
+      if (!target.requestFullscreen && !target.msRequestFullscreen && !target.mozRequestFullScreen && !target.mozRequestFullscreen && !target.webkitRequestFullscreen) {
+        return -3;
+      }
+  
+      var canPerformRequests = JSEvents.canPerformEventHandlerRequests();
+  
+      // Queue this function call if we're not currently in an event handler and the user saw it appropriate to do so.
+      if (!canPerformRequests) {
+        if (strategy.deferUntilInEventHandler) {
+          JSEvents.deferCall(JSEvents.requestFullscreen, 1 /* priority over pointer lock */, [target, strategy]);
+          return 1;
+        } else {
+          return -2;
+        }
+      }
+  
+      return JSEvents.requestFullscreen(target, strategy);
+    }function _emscripten_request_fullscreen_strategy(target, deferUntilInEventHandler, fullscreenStrategy) {
+      var strategy = {};
+      strategy.scaleMode = HEAP32[((fullscreenStrategy)>>2)];
+      strategy.canvasResolutionScaleMode = HEAP32[(((fullscreenStrategy)+(4))>>2)];
+      strategy.filteringMode = HEAP32[(((fullscreenStrategy)+(8))>>2)];
+      strategy.deferUntilInEventHandler = deferUntilInEventHandler;
+      strategy.canvasResizedCallback = HEAP32[(((fullscreenStrategy)+(12))>>2)];
+      strategy.canvasResizedCallbackUserData = HEAP32[(((fullscreenStrategy)+(16))>>2)];
+      __currentFullscreenStrategy = strategy;
+  
+      return _emscripten_do_request_fullscreen(target, strategy);
     }
 
    
   Module["___uremdi3"] = ___uremdi3;
+
+  function _glScissor(x0, x1, x2, x3) { GLctx['scissor'](x0, x1, x2, x3) }
 
    
   Module["_llvm_bswap_i32"] = _llvm_bswap_i32;
@@ -4689,6 +4694,10 @@ function copyTempDouble(ptr) {
     return -e.errno;
   }
   }
+
+  function _glfwSetWindowSize(winid, width, height) {
+      GLFW.setWindowSize(winid, width, height);
+    }
 
   function ___syscall146(which, varargs) {SYSCALLS.varargs = varargs;
   try {
@@ -4821,7 +4830,7 @@ function invoke_v(index) {
 
 Module.asmGlobalArg = { "Math": Math, "Int8Array": Int8Array, "Int16Array": Int16Array, "Int32Array": Int32Array, "Uint8Array": Uint8Array, "Uint16Array": Uint16Array, "Uint32Array": Uint32Array, "Float32Array": Float32Array, "Float64Array": Float64Array, "NaN": NaN, "Infinity": Infinity };
 
-Module.asmLibraryArg = { "abort": abort, "assert": assert, "enlargeMemory": enlargeMemory, "getTotalMemory": getTotalMemory, "abortOnCannotGrowMemory": abortOnCannotGrowMemory, "abortStackOverflow": abortStackOverflow, "nullFunc_ii": nullFunc_ii, "nullFunc_iiii": nullFunc_iiii, "nullFunc_viiiii": nullFunc_viiiii, "nullFunc_viii": nullFunc_viii, "nullFunc_v": nullFunc_v, "invoke_ii": invoke_ii, "invoke_iiii": invoke_iiii, "invoke_viiiii": invoke_viiiii, "invoke_viii": invoke_viii, "invoke_v": invoke_v, "__softFullscreenResizeWebGLRenderTarget": __softFullscreenResizeWebGLRenderTarget, "_glfwCreateWindow": _glfwCreateWindow, "_emscripten_set_fullscreenchange_callback": _emscripten_set_fullscreenchange_callback, "_glfwSetWindowSize": _glfwSetWindowSize, "__hideEverythingExceptGivenElement": __hideEverythingExceptGivenElement, "___unlock": ___unlock, "__restoreHiddenElements": __restoreHiddenElements, "_emscripten_set_main_loop_timing": _emscripten_set_main_loop_timing, "_glfwGetWindowSize": _glfwGetWindowSize, "_glfwGetPrimaryMonitor": _glfwGetPrimaryMonitor, "_glfwMakeContextCurrent": _glfwMakeContextCurrent, "_emscripten_get_fullscreen_status": _emscripten_get_fullscreen_status, "_emscripten_asm_const_i": _emscripten_asm_const_i, "_emscripten_exit_fullscreen": _emscripten_exit_fullscreen, "_emscripten_request_fullscreen_strategy": _emscripten_request_fullscreen_strategy, "_glfwGetFramebufferSize": _glfwGetFramebufferSize, "_emscripten_get_element_css_size": _emscripten_get_element_css_size, "___setErrNo": ___setErrNo, "_glClearColor": _glClearColor, "_glClear": _glClear, "_emscripten_memcpy_big": _emscripten_memcpy_big, "_emscripten_asm_const_v": _emscripten_asm_const_v, "___syscall6": ___syscall6, "_emscripten_enter_soft_fullscreen": _emscripten_enter_soft_fullscreen, "_glfwGetVideoModes": _glfwGetVideoModes, "_emscripten_exit_soft_fullscreen": _emscripten_exit_soft_fullscreen, "___syscall54": ___syscall54, "_glfwInit": _glfwInit, "_emscripten_get_canvas_size": _emscripten_get_canvas_size, "__setLetterbox": __setLetterbox, "_emscripten_set_main_loop": _emscripten_set_main_loop, "_emscripten_get_now": _emscripten_get_now, "_glfwTerminate": _glfwTerminate, "__registerRestoreOldStyle": __registerRestoreOldStyle, "___lock": ___lock, "_glfwSetKeyCallback": _glfwSetKeyCallback, "_abort": _abort, "_emscripten_do_request_fullscreen": _emscripten_do_request_fullscreen, "___syscall140": ___syscall140, "_glfwDestroyWindow": _glfwDestroyWindow, "___syscall146": ___syscall146, "_glfwSetWindowSizeCallback": _glfwSetWindowSizeCallback, "DYNAMICTOP_PTR": DYNAMICTOP_PTR, "tempDoublePtr": tempDoublePtr, "ABORT": ABORT, "STACKTOP": STACKTOP, "STACK_MAX": STACK_MAX, "cttz_i8": cttz_i8 };
+Module.asmLibraryArg = { "abort": abort, "assert": assert, "enlargeMemory": enlargeMemory, "getTotalMemory": getTotalMemory, "abortOnCannotGrowMemory": abortOnCannotGrowMemory, "abortStackOverflow": abortStackOverflow, "nullFunc_ii": nullFunc_ii, "nullFunc_iiii": nullFunc_iiii, "nullFunc_viiiii": nullFunc_viiiii, "nullFunc_viii": nullFunc_viii, "nullFunc_v": nullFunc_v, "invoke_ii": invoke_ii, "invoke_iiii": invoke_iiii, "invoke_viiiii": invoke_viiiii, "invoke_viii": invoke_viii, "invoke_v": invoke_v, "__softFullscreenResizeWebGLRenderTarget": __softFullscreenResizeWebGLRenderTarget, "_emscripten_get_element_css_size": _emscripten_get_element_css_size, "_glfwCreateWindow": _glfwCreateWindow, "_emscripten_set_fullscreenchange_callback": _emscripten_set_fullscreenchange_callback, "_glfwSetWindowSize": _glfwSetWindowSize, "_glScissor": _glScissor, "__hideEverythingExceptGivenElement": __hideEverythingExceptGivenElement, "___unlock": ___unlock, "__restoreHiddenElements": __restoreHiddenElements, "___setErrNo": ___setErrNo, "_glfwGetWindowSize": _glfwGetWindowSize, "_glfwGetPrimaryMonitor": _glfwGetPrimaryMonitor, "_glfwMakeContextCurrent": _glfwMakeContextCurrent, "_emscripten_get_fullscreen_status": _emscripten_get_fullscreen_status, "_emscripten_asm_const_i": _emscripten_asm_const_i, "_emscripten_exit_fullscreen": _emscripten_exit_fullscreen, "_emscripten_set_main_loop": _emscripten_set_main_loop, "_glfwGetFramebufferSize": _glfwGetFramebufferSize, "_glViewport": _glViewport, "_emscripten_set_main_loop_timing": _emscripten_set_main_loop_timing, "_glClearColor": _glClearColor, "_glClear": _glClear, "_emscripten_memcpy_big": _emscripten_memcpy_big, "_emscripten_asm_const_v": _emscripten_asm_const_v, "___syscall6": ___syscall6, "_emscripten_enter_soft_fullscreen": _emscripten_enter_soft_fullscreen, "_glfwGetVideoModes": _glfwGetVideoModes, "_glEnable": _glEnable, "___syscall54": ___syscall54, "_glfwInit": _glfwInit, "_emscripten_get_canvas_size": _emscripten_get_canvas_size, "__setLetterbox": __setLetterbox, "_emscripten_request_fullscreen_strategy": _emscripten_request_fullscreen_strategy, "_emscripten_get_now": _emscripten_get_now, "_glfwTerminate": _glfwTerminate, "__registerRestoreOldStyle": __registerRestoreOldStyle, "_glfwSetWindowSizeCallback": _glfwSetWindowSizeCallback, "___lock": ___lock, "_glfwSetKeyCallback": _glfwSetKeyCallback, "_abort": _abort, "_glDisable": _glDisable, "_emscripten_do_request_fullscreen": _emscripten_do_request_fullscreen, "___syscall140": ___syscall140, "_glfwDestroyWindow": _glfwDestroyWindow, "___syscall146": ___syscall146, "_emscripten_exit_soft_fullscreen": _emscripten_exit_soft_fullscreen, "DYNAMICTOP_PTR": DYNAMICTOP_PTR, "tempDoublePtr": tempDoublePtr, "ABORT": ABORT, "STACKTOP": STACKTOP, "STACK_MAX": STACK_MAX, "cttz_i8": cttz_i8 };
 // EMSCRIPTEN_START_ASM
 var asm = (function(global, env, buffer) {
   'almost asm';
@@ -4887,23 +4896,25 @@ var asm = (function(global, env, buffer) {
   var invoke_viii=env.invoke_viii;
   var invoke_v=env.invoke_v;
   var __softFullscreenResizeWebGLRenderTarget=env.__softFullscreenResizeWebGLRenderTarget;
+  var _emscripten_get_element_css_size=env._emscripten_get_element_css_size;
   var _glfwCreateWindow=env._glfwCreateWindow;
   var _emscripten_set_fullscreenchange_callback=env._emscripten_set_fullscreenchange_callback;
   var _glfwSetWindowSize=env._glfwSetWindowSize;
+  var _glScissor=env._glScissor;
   var __hideEverythingExceptGivenElement=env.__hideEverythingExceptGivenElement;
   var ___unlock=env.___unlock;
   var __restoreHiddenElements=env.__restoreHiddenElements;
-  var _emscripten_set_main_loop_timing=env._emscripten_set_main_loop_timing;
+  var ___setErrNo=env.___setErrNo;
   var _glfwGetWindowSize=env._glfwGetWindowSize;
   var _glfwGetPrimaryMonitor=env._glfwGetPrimaryMonitor;
   var _glfwMakeContextCurrent=env._glfwMakeContextCurrent;
   var _emscripten_get_fullscreen_status=env._emscripten_get_fullscreen_status;
   var _emscripten_asm_const_i=env._emscripten_asm_const_i;
   var _emscripten_exit_fullscreen=env._emscripten_exit_fullscreen;
-  var _emscripten_request_fullscreen_strategy=env._emscripten_request_fullscreen_strategy;
+  var _emscripten_set_main_loop=env._emscripten_set_main_loop;
   var _glfwGetFramebufferSize=env._glfwGetFramebufferSize;
-  var _emscripten_get_element_css_size=env._emscripten_get_element_css_size;
-  var ___setErrNo=env.___setErrNo;
+  var _glViewport=env._glViewport;
+  var _emscripten_set_main_loop_timing=env._emscripten_set_main_loop_timing;
   var _glClearColor=env._glClearColor;
   var _glClear=env._glClear;
   var _emscripten_memcpy_big=env._emscripten_memcpy_big;
@@ -4911,23 +4922,25 @@ var asm = (function(global, env, buffer) {
   var ___syscall6=env.___syscall6;
   var _emscripten_enter_soft_fullscreen=env._emscripten_enter_soft_fullscreen;
   var _glfwGetVideoModes=env._glfwGetVideoModes;
-  var _emscripten_exit_soft_fullscreen=env._emscripten_exit_soft_fullscreen;
+  var _glEnable=env._glEnable;
   var ___syscall54=env.___syscall54;
   var _glfwInit=env._glfwInit;
   var _emscripten_get_canvas_size=env._emscripten_get_canvas_size;
   var __setLetterbox=env.__setLetterbox;
-  var _emscripten_set_main_loop=env._emscripten_set_main_loop;
+  var _emscripten_request_fullscreen_strategy=env._emscripten_request_fullscreen_strategy;
   var _emscripten_get_now=env._emscripten_get_now;
   var _glfwTerminate=env._glfwTerminate;
   var __registerRestoreOldStyle=env.__registerRestoreOldStyle;
+  var _glfwSetWindowSizeCallback=env._glfwSetWindowSizeCallback;
   var ___lock=env.___lock;
   var _glfwSetKeyCallback=env._glfwSetKeyCallback;
   var _abort=env._abort;
+  var _glDisable=env._glDisable;
   var _emscripten_do_request_fullscreen=env._emscripten_do_request_fullscreen;
   var ___syscall140=env.___syscall140;
   var _glfwDestroyWindow=env._glfwDestroyWindow;
   var ___syscall146=env.___syscall146;
-  var _glfwSetWindowSizeCallback=env._glfwSetWindowSizeCallback;
+  var _emscripten_exit_soft_fullscreen=env._emscripten_exit_soft_fullscreen;
   var tempFloat = 0.0;
 
 // EMSCRIPTEN_START_FUNCS
@@ -4974,11 +4987,24 @@ function getTempRet0() {
 }
 
 function _render() {
- var label = 0, sp = 0;
+ var $0 = 0, $1 = 0, $2 = 0, $3 = 0, $4 = 0, $5 = 0, $6 = 0, label = 0, sp = 0;
  sp = STACKTOP;
+ STACKTOP = STACKTOP + 16|0; if ((STACKTOP|0) >= (STACK_MAX|0)) abortStackOverflow(16|0);
+ $0 = sp + 4|0;
+ $1 = sp;
+ $2 = HEAP32[873]|0;
+ _glfwGetFramebufferSize(($2|0),($0|0),($1|0));
+ $3 = HEAP32[$0>>2]|0;
+ $4 = HEAP32[$1>>2]|0;
+ _glViewport(0,0,($3|0),($4|0));
+ _glEnable(3089);
+ $5 = HEAP32[$0>>2]|0;
+ $6 = HEAP32[$1>>2]|0;
+ _glScissor(0,0,($5|0),($6|0));
  _glClearColor(0.5,0.5,0.5,1.0);
  _glClear(16384);
- return;
+ _glDisable(3089);
+ STACKTOP = sp;return;
 }
 function _on_canvassize_changed($0,$1,$2) {
  $0 = $0|0;
