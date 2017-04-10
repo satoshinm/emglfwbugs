@@ -19,6 +19,7 @@ void render() {
     glClear(GL_COLOR_BUFFER_BIT);
 }
 
+#ifdef __EMSCRIPTEN__
 EM_BOOL on_canvassize_changed(int eventType, const void *reserved, void *userData)
 {
     /* TODO: ?
@@ -32,10 +33,12 @@ EM_BOOL on_canvassize_changed(int eventType, const void *reserved, void *userDat
   */
   return 0;
 }
+#endif
 
 static int inFullscreen = 0;
 static int wasFullscreen = 0;
 void windowSizeCallback(GLFWwindow* window, int width, int height) {
+#ifdef __EMSCRIPTEN__
   int isInFullscreen = EM_ASM_INT_V(return !!(document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement));
   if (isInFullscreen && !wasFullscreen) {
     printf("Successfully transitioned to fullscreen mode!\n");
@@ -48,6 +51,7 @@ void windowSizeCallback(GLFWwindow* window, int width, int height) {
     //emscripten_cancel_main_loop();
     return;
   }
+#endif
 }
 
 #ifdef __EMSCRIPTEN__
@@ -79,10 +83,49 @@ EM_BOOL fullscreen_change_callback(int eventType, const EmscriptenFullscreenChan
 
 #endif
 
+#define MAX(a, b) ((a) > (b) ? (a) : (b))
+#define MIN(a, b) ((a) < (b) ? (a) : (b))
+int get_scale_factor(GLFWwindow *window) {
+    int window_width, window_height;
+    int buffer_width, buffer_height;
+    glfwGetWindowSize(window, &window_width, &window_height);
+    if (window_width <= 0 || window_height <= 0) {
+        return 0;
+    }
+    glfwGetFramebufferSize(window, &buffer_width, &buffer_height);
+    int result = buffer_width / window_width;
+    result = MAX(1, result);
+    result = MIN(2, result);
+    return result;
+}
+
+GLFWmonitor *fullscreen_monitor;
+int fullscreen_width, fullscreen_height;
+int window_xpos, window_ypos, window_width, window_height;
+void init_fullscreen_monitor_dimensions() {
+    int mode_count;
+    fullscreen_monitor = glfwGetPrimaryMonitor();
+    const GLFWvidmode *modes = glfwGetVideoModes(fullscreen_monitor, &mode_count);
+    fullscreen_width = modes[mode_count - 1].width;
+    fullscreen_height= modes[mode_count - 1].height;
+
+    GLFWwindow *test_window = glfwCreateWindow(
+        fullscreen_width, fullscreen_height, "Craft", NULL, NULL);
+    int scale = get_scale_factor(test_window);
+    glfwDestroyWindow(test_window);
+    fullscreen_width /= scale;
+    fullscreen_height /= scale;
+
+#ifdef __EMSCRIPTEN__
+    emscripten_set_fullscreenchange_callback(NULL, NULL, EM_TRUE, fullscreen_change_callback);
+#endif
+}
+
 
 void on_key(GLFWwindow *window, int key, int scancode, int action, int mods) {
     if (action && GLFW_PRESS && key == GLFW_KEY_F11) {
         printf("glfwSetKeyCallback: F11 pressed\n");
+#ifdef __EMSCRIPTEN__
         // F11 toggles between fullscreen and fullwindow ("soft fullscreen") mode. The app starts
         // in fullwindow, a solid gray page. When fullscreen is entered with F11, the entire
         // screen should be solid gray. Returning to fullwindow with F11 should also show the same.
@@ -115,6 +158,15 @@ void on_key(GLFWwindow *window, int key, int scancode, int action, int mods) {
             printf("Maximizing to canvas...\n");
             maximize_canvas();
         }
+#else
+    if (glfwGetWindowMonitor(window)) {
+        glfwSetWindowMonitor(window, NULL, window_xpos, window_ypos, window_width, window_height, GLFW_DONT_CARE);
+    } else {
+        glfwGetWindowPos(window, &window_xpos, &window_ypos);
+        glfwGetWindowSize(window, &window_width, &window_height);
+        glfwSetWindowMonitor(window, fullscreen_monitor, 0, 0, fullscreen_width, fullscreen_height, GLFW_DONT_CARE);
+    }
+#endif
     }
 }
 
@@ -123,6 +175,7 @@ int main() {
         return -1;
     }
 
+	init_fullscreen_monitor_dimensions();
     window = glfwCreateWindow(640, 480, "test_fullscreen_fullwindow_toggle", NULL, NULL);
     if (!window) {
         glfwTerminate();
@@ -137,7 +190,6 @@ int main() {
 
 #ifdef __EMSCRIPTEN__
     maximize_canvas();
-    emscripten_set_fullscreenchange_callback(NULL, NULL, EM_TRUE, fullscreen_change_callback);
     emscripten_set_main_loop(render, 0, 1);
 #else
     while (!glfwWindowShouldClose(window)) {
