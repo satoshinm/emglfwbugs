@@ -78,15 +78,18 @@ void on_key(GLFWwindow *window, int key, int scancode, int action, int mods) {
             emscripten_exit_soft_fullscreen();
 
             // Enter fullscreen
-            /*
+            /* this returns 1=EMSCRIPTEN_RESULT_DEFERRED if EM_TRUE is given to defer
+             * or -2=EMSCRIPTEN_RESULT_FAILED_NOT_DEFERRED if EM_FALSE
+             * but the EM_ASM() JS works immediately?
+             *
             EmscriptenFullscreenStrategy strategy = {
                 .scaleMode = EMSCRIPTEN_FULLSCREEN_SCALE_STRETCH,
                 .canvasResolutionScaleMode = EMSCRIPTEN_FULLSCREEN_CANVAS_SCALE_STDDEF,
                 .filteringMode = EMSCRIPTEN_FULLSCREEN_FILTERING_DEFAULT,
-                .canvasResizedCallback = on_canvassize_changed,
+                .canvasResizedCallback = /on_canvassize_changed,
                 .canvasResizedCallbackUserData = NULL
             };
-            EMSCRIPTEN_RESULT ret = emscripten_request_fullscreen_strategy(NULL, EM_TRUE, &strategy);
+            EMSCRIPTEN_RESULT ret = emscripten_request_fullscreen_strategy(NULL, EM_FALSE, &strategy);
             printf("emscripten_request_fullscreen_strategy = %d\n", ret);
             */
             EM_ASM(Module.requestFullscreen(1, 1));
